@@ -1,0 +1,62 @@
+{
+  "date": "12-24",
+  "total_papers": 5,
+  "papers": [
+    {
+      "id": "sample1",
+      "title": "A Theoretical Framework for Understanding Holiday Productivity Patterns in Academic Research",
+      "author_count": 3,
+      "year": 2018,
+      "citation_count": 127,
+      "field": "Social Sciences",
+      "subfield": "Organizational Behavior",
+      "venue": "Journal of Academic Productivity",
+      "url": "https://example.com/paper1"
+    },
+    {
+      "id": "sample2",
+      "title": "Machine Learning Approaches to Gift Recommendation Systems",
+      "author_count": 5,
+      "year": 2020,
+      "citation_count": 342,
+      "field": "Computer Science",
+      "subfield": "Artificial Intelligence",
+      "venue": "International Conference on Machine Learning",
+      "url": "https://example.com/paper2"
+    },
+    {
+      "id": "sample3",
+      "title": "The Physics of Snow Crystal Formation: A Comprehensive Review",
+      "author_count": 2,
+      "year": 2015,
+      "citation_count": 589,
+      "field": "Physics",
+      "subfield": "Atmospheric Physics",
+      "venue": "Nature Physics",
+      "url": "https://example.com/paper3"
+    },
+    {
+      "id": "sample4",
+      "title": "Economic Analysis of Seasonal Consumer Behavior",
+      "author_count": 4,
+      "year": 2019,
+      "citation_count": 218,
+      "field": "Economics",
+      "subfield": "Behavioral Economics",
+      "venue": "American Economic Review",
+      "url": "https://example.com/paper4"
+    },
+    {
+      "id": "sample5",
+      "title": "Calendar Effects in Financial Markets: Evidence from December Trading Patterns",
+      "author_count": 2,
+      "year": 2016,
+      "citation_count": 445,
+      "field": "Economics",
+      "subfield": "Finance",
+      "venue": "Journal of Financial Economics",
+      "url": "https://example.com/paper5"
+    }
+  ],
+  "last_updated": "2024-12-24T00:00:00Z"
+}

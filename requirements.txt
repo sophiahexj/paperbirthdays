@@ -1,0 +1,10 @@
+# Python dependencies for Paper Birthdays
+
+# Database
+psycopg2-binary==2.9.9
+
+# HTTP requests
+requests==2.31.0
+
+# Environment variables
+python-dotenv==1.0.1
