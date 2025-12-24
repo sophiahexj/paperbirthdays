@@ -1,9 +1,9 @@
 name: Daily Paper Update
 
 on:
-  # Run daily at 2 AM UTC
+  # Run daily at midnight UTC (so tomorrow's papers are ready when the day starts)
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 0 * * *'
 
   # Allow manual trigger for testing
   workflow_dispatch:
@@ -29,19 +29,22 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run data ingestion for today
+      - name: Run data ingestion for tomorrow
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: |
-          python scripts/ingest_recent.py
+          # Calculate tomorrow's date
+          TOMORROW=$(date -d '+1 day' +%m-%d)
+          python scripts/ingest_recent.py $TOMORROW
 
-      - name: Generate JSON files for today
+      - name: Generate JSON files for tomorrow
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          TODAY=$(date +%m-%d)
-          python scripts/generate_json.py $TODAY
+          # Calculate tomorrow's date
+          TOMORROW=$(date -d '+1 day' +%m-%d)
+          python scripts/generate_json.py $TOMORROW
 
       - name: Commit and push if changes
         run: |
@@ -53,7 +56,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update paper data for $(date +'%Y-%m-%d')
+            TOMORROW=$(date -d '+1 day' +'%Y-%m-%d')
+            git commit -m "Update paper data for ${TOMORROW} (tomorrow)
 
             🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
