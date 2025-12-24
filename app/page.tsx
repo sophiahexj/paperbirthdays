@@ -1,6 +1,7 @@
 import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
 import { DailyPapers } from '@/types/paper';
-import RandomPaperDisplay from '@/components/RandomPaperDisplay';
+import PaperBrowser from '@/components/PaperBrowser';
+import FieldNavigation from '@/components/FieldNavigation';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -50,7 +51,12 @@ export default async function Home() {
         </header>
 
         {data.total_papers > 0 ? (
-          <RandomPaperDisplay papers={data.papers} />
+          <>
+            <FieldNavigation
+              fields={Array.from(new Set(data.papers.map(p => p.field))).sort()}
+            />
+            <PaperBrowser papers={data.papers} />
+          </>
         ) : (
           <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Getting Started</h2>
