@@ -1,0 +1,71 @@
+name: Daily Paper Update
+
+on:
+  # Run daily at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run data ingestion for today
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+        run: |
+          python scripts/ingest_recent.py
+
+      - name: Generate JSON files for today
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          TODAY=$(date +%m-%d)
+          python scripts/generate_json.py $TODAY
+
+      - name: Commit and push if changes
+        run: |
+          git config --global user.name 'Paper Birthday Bot'
+          git config --global user.email 'bot@paperbirthdays.com'
+          git add public/data/*.json
+
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update paper data for $(date +'%Y-%m-%d')
+
+            🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+            Co-Authored-By: Claude <noreply@anthropic.com>"
+            git push
+          fi
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '❌ Daily Update Failed - ' + new Date().toISOString().split('T')[0],
+              body: 'The daily paper update workflow failed. Check the [workflow logs](https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions) for details.',
+              labels: ['automated', 'bug']
+            })
