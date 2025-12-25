@@ -35,13 +35,10 @@ export default async function Home() {
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="font-display text-[2.5rem] font-semibold mb-6 text-text-primary">
-            🎂 Paper Birthdays
+            🎂 Happy Birthday, Paper! 🎂
           </h1>
-          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-2">
-            {todayFormatted}
-          </p>
-          <p className="font-body text-[2rem] font-light text-text-secondary mb-4">
-            ✨ {currentYear} ✨
+          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-4">
+            ✨ {todayFormatted} ✨
           </p>
           {data.total_papers > 0 ? (
             <p className="text-sm text-text-muted">
