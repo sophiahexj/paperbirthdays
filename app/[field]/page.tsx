@@ -8,15 +8,16 @@ import { notFound } from 'next/navigation';
 export const revalidate = 3600; // Revalidate every hour
 
 interface PageProps {
-  params: {
+  params: Promise<{
     field: string;
-  };
+  }>;
 }
 
 export default async function FieldPage({ params }: PageProps) {
   const today = getTodayMMDD();
   const todayFormatted = formatDateForDisplay(today);
-  const fieldName = decodeURIComponent(params.field);
+  const { field } = await params;
+  const fieldName = decodeURIComponent(field);
 
   // Fetch data from local JSON file
   const filePath = path.join(process.cwd(), 'public', 'data', `${today}.json`);
