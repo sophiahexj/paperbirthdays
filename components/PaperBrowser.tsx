@@ -124,20 +124,6 @@ export default function PaperBrowser({ papers, allFields }: Props) {
         <FieldNavigation fields={allFields} />
       )}
 
-      {/* Results Info */}
-      <div className="text-center mb-4">
-        <p className="text-sm text-gray-600">
-          Showing{' '}
-          <span className="font-semibold text-gray-900">{filteredPapers.length}</span>{' '}
-          {filteredPapers.length === 1 ? 'paper' : 'papers'}
-          {sortBy !== 'random' && (
-            <span className="text-gray-500 ml-2">
-              (sorted by {sortBy})
-            </span>
-          )}
-        </p>
-      </div>
-
       {/* Toggle Stats Button */}
       <div className="flex justify-end mb-3">
         <button

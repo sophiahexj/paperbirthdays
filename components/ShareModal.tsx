@@ -2,6 +2,7 @@
 
 import { Paper } from '@/types/paper';
 import { useState, useEffect } from 'react';
+import { generatePaperSlug } from '@/lib/slugUtils';
 
 interface ShareModalProps {
   paper: Paper;
@@ -13,13 +14,14 @@ export default function ShareModal({ paper, isOpen, onClose }: ShareModalProps) 
   const [copied, setCopied] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Create memorable share URL format like /dec-25-2024
+  // Create unique share URL format like /dec-25/causal-inference-2016
   const monthNames = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
   const today = new Date();
   const month = monthNames[today.getMonth()];
   const day = today.getDate();
+  const slug = generatePaperSlug(paper);
   const memorableUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}/${month}-${day}-${paper.year}`
+    ? `${window.location.origin}/${month}-${day}/${slug}`
     : '';
 
   const shareText = `🎂 This paper shares a birthday with today! "${paper.title}" was published ${paper.year} years ago with ${paper.citation_count.toLocaleString()} citations`;
