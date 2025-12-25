@@ -60,7 +60,7 @@ def ingest_papers(month, day, year_start=2015, year_end=2024):
                 "https://api.semanticscholar.org/graph/v1/paper/search",
                 params={
                     'query': f'publicationDate:{date_str}',
-                    'fields': 'title,authors,year,citationCount,fieldsOfStudy,venue,externalIds,openAccessPdf',
+                    'fields': 'title,authors,year,publicationDate,citationCount,fieldsOfStudy,venue,externalIds,openAccessPdf',
                     'limit': 100
                 },
                 timeout=20
@@ -73,6 +73,26 @@ def ingest_papers(month, day, year_start=2015, year_end=2024):
 
                 for paper in papers:
                     if not paper.get('paperId') or not paper.get('title'):
+                        continue
+
+                    # CRITICAL: Validate actual publication date matches what we queried for
+                    actual_pub_date = paper.get('publicationDate')
+                    if not actual_pub_date:
+                        continue
+
+                    # Only store if the ACTUAL publication date matches our query date
+                    if actual_pub_date != date_str:
+                        continue  # Skip papers with wrong dates
+
+                    # Extract month-day from actual publication date
+                    try:
+                        parts = actual_pub_date.split('-')
+                        if len(parts) >= 3:
+                            actual_month_day = f"{parts[1]}-{parts[2]}"
+                            actual_year = int(parts[0])
+                        else:
+                            continue  # Skip if date format is incomplete
+                    except:
                         continue
 
                     fields = paper.get('fieldsOfStudy', [])
@@ -95,9 +115,9 @@ def ingest_papers(month, day, year_start=2015, year_end=2024):
                             'semantic_scholar',
                             paper.get('title'),
                             len(paper.get('authors', [])),
-                            date_str,
-                            month_day,
-                            year,
+                            actual_pub_date,  # Use ACTUAL date from API
+                            actual_month_day,  # Use ACTUAL month-day
+                            actual_year,  # Use ACTUAL year
                             paper.get('venue'),
                             normalize_field(fields),
                             fields,

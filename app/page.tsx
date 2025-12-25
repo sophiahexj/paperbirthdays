@@ -31,13 +31,13 @@ export default async function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4">
+    <main className="min-h-screen bg-background py-6 sm:py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12">
-          <h1 className="font-display text-[2.5rem] font-semibold mb-6 text-text-primary">
+        <header className="text-center mb-8 sm:mb-12">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-[2.5rem] font-semibold mb-4 sm:mb-6 text-text-primary">
             🎂 Happy Birthday, Paper! 🎂
           </h1>
-          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-4">
+          <p className="font-body text-sm sm:text-base uppercase tracking-[0.15em] text-accent mb-4">
             ✨ {todayFormatted} ✨
           </p>
           {data.total_papers > 0 ? (
