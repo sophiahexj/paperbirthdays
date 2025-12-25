@@ -98,7 +98,6 @@ def generate_tweet(paper, site_url="https://happybdaypaper.com"):
 "{title}" turns {age} today!
 
 📅 Published {month_name} {day}, {year}
-📊 {citations:,} citations
 🏷️ #{field_hashtag}
 
 Celebrate other paper birthdays at {paper_url}"""
@@ -119,7 +118,6 @@ Celebrate other paper birthdays at {paper_url}"""
 "{truncated_title}" turns {age} today!
 
 📅 Published {month_name} {day}, {year}
-📊 {citations:,} citations
 🏷️ #{field_hashtag}
 
 Celebrate other paper birthdays at {paper_url}"""
