@@ -4,6 +4,7 @@ import PaperBrowser from '@/components/PaperBrowser';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -53,12 +54,12 @@ export default async function FieldPage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto">
         {/* Navigation */}
         <div className="mb-8">
-          <a
+          <Link
             href="/"
             className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2"
           >
             ← Back to all fields
-          </a>
+          </Link>
         </div>
 
         <header className="text-center mb-12">
@@ -104,12 +105,12 @@ export default async function FieldPage({ params }: PageProps) {
             <p className="text-gray-600 mb-6">
               No {fieldName} papers found for {todayFormatted}.
             </p>
-            <a
+            <Link
               href="/"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
             >
               View All Papers
-            </a>
+            </Link>
           </div>
         )}
       </div>
