@@ -1,0 +1,43 @@
+name: Daily Paper Birthday Tweet
+
+on:
+  schedule:
+    # Run every day at 9:00 AM UTC (adjust time as needed)
+    - cron: '0 9 * * *'
+
+  # Allow manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Post daily tweet
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: |
+          python scripts/tweet_daily.py
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "Tweet posting failed. Check the logs above."
+          exit 1
