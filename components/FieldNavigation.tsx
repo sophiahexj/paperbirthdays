@@ -14,7 +14,7 @@ export default function FieldNavigation({ fields }: FieldNavigationProps) {
         {fields.map((field) => (
           <a
             key={field}
-            href={`/${encodeURIComponent(field.toLowerCase())}`}
+            href={`/field/${encodeURIComponent(field.toLowerCase())}`}
             className="font-body text-sm text-text-muted hover:text-accent transition-colors"
           >
             {field}

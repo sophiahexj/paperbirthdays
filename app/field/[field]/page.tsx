@@ -89,7 +89,7 @@ export default async function FieldPage({ params }: PageProps) {
               {availableFields.map((field) => (
                 <a
                   key={field}
-                  href={`/${encodeURIComponent(field.toLowerCase())}`}
+                  href={`/field/${encodeURIComponent(field.toLowerCase())}`}
                   className={`font-body text-sm transition ${
                     field.toLowerCase() === fieldName.toLowerCase()
                       ? 'text-accent font-medium underline'
