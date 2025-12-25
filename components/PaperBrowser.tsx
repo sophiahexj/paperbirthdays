@@ -12,17 +12,7 @@ interface Props {
 }
 
 export default function PaperBrowser({ papers }: Props) {
-  // Filter state
-  const [selectedField, setSelectedField] = useState<string>('all');
-  const [selectedYearRange, setSelectedYearRange] = useState<[number, number]>([0, 9999]);
-  const [minCitations, setMinCitations] = useState<number>(0);
-  const [sortBy, setSortBy] = useState<'random' | 'citations' | 'year' | 'authors'>('random');
-
-  // Display state
-  const [selectedPaper, setSelectedPaper] = useState<Paper | null>(null);
-  const [showStats, setShowStats] = useState(false);
-
-  // Calculate available fields and year range
+  // Calculate available fields and year range first
   const availableFields = useMemo(() => {
     const fields = new Set(papers.map(p => p.field));
     return Array.from(fields).sort();
@@ -34,10 +24,15 @@ export default function PaperBrowser({ papers }: Props) {
     return [Math.min(...years), Math.max(...years)];
   }, [papers]);
 
-  // Initialize year range
-  useEffect(() => {
-    setSelectedYearRange(yearRange);
-  }, [yearRange]);
+  // Filter state - initialize with actual year range
+  const [selectedField, setSelectedField] = useState<string>('all');
+  const [selectedYearRange, setSelectedYearRange] = useState<[number, number]>(yearRange);
+  const [minCitations, setMinCitations] = useState<number>(0);
+  const [sortBy, setSortBy] = useState<'random' | 'citations' | 'year' | 'authors'>('random');
+
+  // Display state
+  const [selectedPaper, setSelectedPaper] = useState<Paper | null>(null);
+  const [showStats, setShowStats] = useState(false);
 
   // Apply filters and sort
   const filteredPapers = useMemo(() => {
