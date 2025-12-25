@@ -28,22 +28,27 @@ export default async function Home() {
     };
   }
 
+  const currentYear = new Date().getFullYear();
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4">
+    <main className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-2 text-gray-900">
-            Paper Birthdays
+          <h1 className="font-display text-[2.5rem] font-semibold mb-6 text-text-primary">
+            🎂 Paper Birthdays
           </h1>
-          <p className="text-xl text-gray-600">
-            Celebrating papers published on <span className="font-semibold">{todayFormatted}</span>
+          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-2">
+            {todayFormatted}
+          </p>
+          <p className="font-body text-[2rem] font-light text-text-secondary mb-4">
+            ✨ {currentYear} ✨
           </p>
           {data.total_papers > 0 ? (
-            <p className="text-sm text-gray-500 mt-2">
-              {data.total_papers} papers • Refresh for a new one
+            <p className="text-sm text-text-muted">
+              {data.total_papers} {data.total_papers === 1 ? 'paper shares' : 'papers share'} this birthday
             </p>
           ) : (
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-text-muted">
               No papers found for today. Run the data ingestion script!
             </p>
           )}

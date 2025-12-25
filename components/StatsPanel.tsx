@@ -33,69 +33,69 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
     .slice(0, 5);
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">Statistics</h2>
+    <div className="bg-accent-light rounded-2xl border border-border p-6 mb-8">
+      <h2 className="font-display text-xl font-semibold text-text-primary mb-4">Statistics</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="text-2xl font-bold text-blue-600">{totalPapers}</div>
-          <div className="text-sm text-gray-600">Total Papers</div>
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <div className="font-display text-2xl font-semibold text-accent">{totalPapers}</div>
+          <div className="font-body text-sm text-text-secondary">Total Papers</div>
         </div>
 
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="text-2xl font-bold text-purple-600">
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <div className="font-display text-2xl font-semibold text-accent">
             {yearRange[0]}-{yearRange[1]}
           </div>
-          <div className="text-sm text-gray-600">Year Range</div>
+          <div className="font-body text-sm text-text-secondary">Year Range</div>
         </div>
 
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="text-2xl font-bold text-green-600">
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <div className="font-display text-2xl font-semibold text-accent">
             {avgCitations.toLocaleString()}
           </div>
-          <div className="text-sm text-gray-600">Avg Citations</div>
+          <div className="font-body text-sm text-text-secondary">Avg Citations</div>
         </div>
 
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="text-2xl font-bold text-orange-600">{topFields.length}</div>
-          <div className="text-sm text-gray-600">Fields</div>
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <div className="font-display text-2xl font-semibold text-accent">{topFields.length}</div>
+          <div className="font-body text-sm text-text-secondary">Fields</div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Most Cited */}
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <h3 className="font-semibold text-gray-900 mb-2">Most Cited</h3>
-          <p className="text-sm text-gray-700 line-clamp-2">{mostCited.title}</p>
-          <p className="text-xs text-gray-500 mt-1">
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <h3 className="font-body font-semibold text-text-primary mb-2">Most Cited</h3>
+          <p className="font-body text-sm text-text-secondary line-clamp-2">{mostCited.title}</p>
+          <p className="font-body text-xs text-text-muted mt-1">
             {mostCited.citation_count.toLocaleString()} citations • {mostCited.year}
           </p>
         </div>
 
         {/* Oldest */}
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <h3 className="font-semibold text-gray-900 mb-2">Oldest Paper</h3>
-          <p className="text-sm text-gray-700 line-clamp-2">{oldest.title}</p>
-          <p className="text-xs text-gray-500 mt-1">
+        <div className="bg-surface rounded-lg p-4 border border-border">
+          <h3 className="font-body font-semibold text-text-primary mb-2">Oldest Paper</h3>
+          <p className="font-body text-sm text-text-secondary line-clamp-2">{oldest.title}</p>
+          <p className="font-body text-xs text-text-muted mt-1">
             {oldest.year} • {oldest.citation_count.toLocaleString()} citations
           </p>
         </div>
       </div>
 
       {/* Field Distribution */}
-      <div className="mt-4 bg-white rounded-lg p-4 shadow-sm">
-        <h3 className="font-semibold text-gray-900 mb-3">Top Fields</h3>
+      <div className="mt-4 bg-surface rounded-lg p-4 border border-border">
+        <h3 className="font-body font-semibold text-text-primary mb-3">Top Fields</h3>
         <div className="space-y-2">
           {topFields.map(([field, count]) => (
             <div key={field} className="flex items-center gap-2">
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm text-gray-700">{field}</span>
-                  <span className="text-xs text-gray-500">{count} papers</span>
+                  <span className="font-body text-sm text-text-primary">{field}</span>
+                  <span className="font-body text-xs text-text-muted">{count} papers</span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="w-full bg-tag-bg rounded-full h-2">
                   <div
-                    className="bg-blue-600 h-2 rounded-full transition-all"
+                    className="bg-accent h-2 rounded-full transition-all"
                     style={{ width: `${(count / totalPapers) * 100}%` }}
                   />
                 </div>

@@ -7,6 +7,7 @@ import PaperCard from './PaperCard';
 import FilterPanel from './FilterPanel';
 import StatsPanel from './StatsPanel';
 import FieldNavigation from './FieldNavigation';
+import ShareModal from './ShareModal';
 
 interface Props {
   papers: Paper[];
@@ -35,6 +36,7 @@ export default function PaperBrowser({ papers, allFields }: Props) {
   // Display state
   const [selectedPaper, setSelectedPaper] = useState<Paper | null>(null);
   const [showStats, setShowStats] = useState(false);
+  const [showShareModal, setShowShareModal] = useState(false);
 
   // Apply filters and sort
   const filteredPapers = useMemo(() => {
@@ -87,27 +89,30 @@ export default function PaperBrowser({ papers, allFields }: Props) {
       {/* Paper Display - NOW AT THE TOP */}
       {selectedPaper ? (
         <div className="mb-8">
-          <PaperCard paper={selectedPaper} />
+          <PaperCard
+            paper={selectedPaper}
+            onShareClick={() => setShowShareModal(true)}
+          />
           {sortBy === 'random' && filteredPapers.length > 1 && (
             <div className="text-center mt-6">
               <button
                 onClick={handleNewRandom}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-md"
+                className="px-6 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent-light transition-all duration-150 font-medium"
               >
-                Show Another Random Paper
+                🔀 Show Another Random Paper
               </button>
             </div>
           )}
         </div>
       ) : (
-        <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">No Papers Found</h2>
-          <p className="text-gray-600 mb-6">
+        <div className="max-w-2xl mx-auto p-8 bg-surface rounded-2xl border border-border text-center mb-8">
+          <h2 className="font-display text-2xl font-semibold mb-4 text-text-primary">No Papers Found</h2>
+          <p className="font-body text-text-secondary mb-6">
             No papers match your current filters. Try adjusting your criteria.
           </p>
           <button
             onClick={handleReset}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+            className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition font-medium"
           >
             Reset Filters
           </button>
@@ -160,6 +165,15 @@ export default function PaperBrowser({ papers, allFields }: Props) {
         onSortChange={setSortBy}
         onReset={handleReset}
       />
+
+      {/* Share Modal */}
+      {selectedPaper && (
+        <ShareModal
+          paper={selectedPaper}
+          isOpen={showShareModal}
+          onClose={() => setShowShareModal(false)}
+        />
+      )}
     </div>
   );
 }

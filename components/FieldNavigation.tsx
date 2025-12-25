@@ -8,14 +8,14 @@ export default function FieldNavigation({ fields }: FieldNavigationProps) {
   }
 
   return (
-    <div className="mb-6 p-4 bg-white rounded-lg shadow-md">
-      <p className="text-sm font-medium text-gray-700 mb-3">Browse by field:</p>
-      <div className="flex flex-wrap gap-2">
+    <div className="mb-8">
+      <p className="font-body text-xs text-text-muted mb-3 text-center">Browse by field:</p>
+      <div className="flex flex-wrap gap-3 justify-center">
         {fields.map((field) => (
           <a
             key={field}
             href={`/${encodeURIComponent(field.toLowerCase())}`}
-            className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-md text-xs font-medium hover:bg-gray-200 transition"
+            className="font-body text-sm text-text-muted hover:text-accent transition-colors"
           >
             {field}
           </a>

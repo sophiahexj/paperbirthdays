@@ -134,27 +134,27 @@ export default async function DatePage({ params }: PageProps) {
   const randomPaper = papers[Math.floor(Math.random() * papers.length)];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4">
+    <main className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Navigation */}
         <div className="mb-8">
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2"
+            className="font-body text-accent hover:text-accent-hover font-medium inline-flex items-center gap-2"
           >
             ← Back to today
           </Link>
         </div>
 
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-2 text-gray-900">
-            Paper Birthday 🎂
+          <h1 className="font-display text-5xl font-semibold mb-2 text-text-primary">
+            🎂 Paper Birthday
           </h1>
-          <p className="text-xl text-gray-600">
-            Published on <span className="font-semibold">{formattedDate}{yearText}</span>
+          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-2">
+            {formattedDate}{yearText}
           </p>
-          <p className="text-sm text-gray-500 mt-2">
-            {papers.length} {papers.length === 1 ? 'paper' : 'papers'} celebrating this birthday
+          <p className="font-body text-sm text-text-muted mt-2">
+            {papers.length} {papers.length === 1 ? 'paper celebrates' : 'papers celebrate'} this birthday
           </p>
         </header>
 
@@ -166,7 +166,7 @@ export default async function DatePage({ params }: PageProps) {
           <div className="text-center mt-8">
             <Link
               href={`/?date=${monthDay}`}
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+              className="inline-block px-6 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent-light transition-all duration-150 font-medium"
             >
               See All {papers.length} Papers from This Birthday
             </Link>
