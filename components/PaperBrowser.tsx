@@ -6,12 +6,14 @@ import { filterPapers, sortPapers, getRandomPaper } from '@/lib/paperUtils';
 import PaperCard from './PaperCard';
 import FilterPanel from './FilterPanel';
 import StatsPanel from './StatsPanel';
+import FieldNavigation from './FieldNavigation';
 
 interface Props {
   papers: Paper[];
+  allFields?: string[]; // Optional: all available fields for navigation
 }
 
-export default function PaperBrowser({ papers }: Props) {
+export default function PaperBrowser({ papers, allFields }: Props) {
   // Calculate available fields and year range first
   const availableFields = useMemo(() => {
     const fields = new Set(papers.map(p => p.field));
@@ -110,6 +112,11 @@ export default function PaperBrowser({ papers }: Props) {
             Reset Filters
           </button>
         </div>
+      )}
+
+      {/* Field Navigation - Below the paper */}
+      {allFields && allFields.length > 0 && (
+        <FieldNavigation fields={allFields} />
       )}
 
       {/* Results Info */}
