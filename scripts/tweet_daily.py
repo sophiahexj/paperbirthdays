@@ -63,7 +63,7 @@ def calculate_age(year):
     current_year = datetime.now().year
     return current_year - year
 
-def generate_tweet(paper, site_url="https://paperbirthdays.com"):
+def generate_tweet(paper, site_url="https://happybdaypaper.com"):
     """
     Generate tweet text for a paper
 
@@ -76,7 +76,7 @@ def generate_tweet(paper, site_url="https://paperbirthdays.com"):
     📊 {citations} citations
     🏷️ #{field}
 
-    Read more: [URL]
+    Celebrate other paper birthdays at [URL]
     """
     title, year, citations, field, venue, paper_id, author_count = paper
 
@@ -85,9 +85,9 @@ def generate_tweet(paper, site_url="https://paperbirthdays.com"):
     month_name = today.strftime('%B')
     day = today.day
 
-    # Create date-based URL
+    # Create date-based URL (without year - points to all papers on this date)
     month_abbrev = today.strftime('%b').lower()
-    paper_url = f"{site_url}/{month_abbrev}-{day}-{year}"
+    paper_url = f"{site_url}/{month_abbrev}-{day}"
 
     # Clean field name for hashtag (remove spaces, capitalize)
     field_hashtag = field.replace(' ', '').replace('-', '')
@@ -101,7 +101,7 @@ def generate_tweet(paper, site_url="https://paperbirthdays.com"):
 📊 {citations:,} citations
 🏷️ #{field_hashtag}
 
-{paper_url}"""
+Celebrate other paper birthdays at {paper_url}"""
 
     # Check length (Twitter limit is 280 chars, URLs count as 23 chars)
     # Calculate actual length (Twitter counts URLs as 23 chars)
@@ -122,7 +122,7 @@ def generate_tweet(paper, site_url="https://paperbirthdays.com"):
 📊 {citations:,} citations
 🏷️ #{field_hashtag}
 
-{paper_url}"""
+Celebrate other paper birthdays at {paper_url}"""
 
     return tweet
 
