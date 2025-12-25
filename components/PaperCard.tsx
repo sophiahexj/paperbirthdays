@@ -11,8 +11,17 @@ export default function PaperCard({ paper }: PaperCardProps) {
   const [showShare, setShowShare] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const shareText = `Check out this paper: "${paper.title}" (${paper.year}) - ${paper.citation_count.toLocaleString()} citations`;
+  // Create memorable share URL format like /dec-25-2024
+  const monthNames = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  const today = new Date();
+  const month = monthNames[today.getMonth()];
+  const day = today.getDate();
+  const memorableUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}/${month}-${day}-${paper.year}`
+    : '';
+
+  const shareUrl = memorableUrl;
+  const shareText = `🎂 This paper shares a birthday with today! "${paper.title}" was published ${paper.year} years ago with ${paper.citation_count.toLocaleString()} citations`;
 
   const handleCopyLink = async () => {
     try {
@@ -41,16 +50,19 @@ export default function PaperCard({ paper }: PaperCardProps) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg transition-all hover:shadow-xl">
-      <div className="mb-4 flex items-center justify-between">
-        <span className="text-sm text-gray-500 uppercase tracking-wide">
+    <div className="max-w-2xl mx-auto p-8 bg-white rounded-xl shadow-xl transition-all hover:shadow-2xl border border-gray-100">
+      <div className="mb-6 flex items-center justify-between">
+        <span className="text-xs text-gray-500 uppercase tracking-wide font-medium">
           {paper.field} • {paper.year}
         </span>
         <button
           onClick={() => setShowShare(!showShare)}
-          className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+          className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-semibold hover:from-blue-600 hover:to-purple-700 transition shadow-md flex items-center gap-2"
         >
-          {showShare ? 'Hide Share' : 'Share'}
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+          </svg>
+          {showShare ? 'Hide' : 'Share This Birthday'}
         </button>
       </div>
 
@@ -83,30 +95,41 @@ export default function PaperCard({ paper }: PaperCardProps) {
 
       {/* Share Options */}
       {showShare && (
-        <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <p className="text-sm font-medium text-gray-700 mb-3">Share this paper:</p>
-          <div className="flex flex-wrap gap-2">
+        <div className="mb-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border-2 border-blue-200">
+          <div className="text-center mb-4">
+            <h3 className="text-lg font-bold text-gray-900 mb-1">🎂 Share This Paper Birthday!</h3>
+            <p className="text-sm text-gray-600">Help others discover this gem</p>
+          </div>
+
+          {/* Share URL Display */}
+          <div className="mb-4 p-3 bg-white rounded-lg border border-gray-200">
+            <p className="text-xs text-gray-500 mb-1 font-medium">Your shareable link:</p>
+            <code className="text-sm text-blue-600 font-mono break-all">{shareUrl}</code>
+          </div>
+
+          {/* Share Buttons */}
+          <div className="grid grid-cols-2 gap-3">
             <button
               onClick={handleCopyLink}
-              className="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition"
+              className="px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all shadow-sm"
             >
               {copied ? '✓ Copied!' : '📋 Copy Link'}
             </button>
             <button
               onClick={handleTwitterShare}
-              className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600 transition"
+              className="px-4 py-3 bg-blue-500 text-white rounded-lg text-sm font-semibold hover:bg-blue-600 transition-all shadow-md hover:shadow-lg"
             >
-              🐦 Twitter
+              𝕏 Twitter
             </button>
             <button
               onClick={handleLinkedInShare}
-              className="px-4 py-2 bg-blue-700 text-white rounded-md text-sm font-medium hover:bg-blue-800 transition"
+              className="px-4 py-3 bg-blue-700 text-white rounded-lg text-sm font-semibold hover:bg-blue-800 transition-all shadow-md hover:shadow-lg"
             >
               💼 LinkedIn
             </button>
             <button
               onClick={handleEmailShare}
-              className="px-4 py-2 bg-gray-700 text-white rounded-md text-sm font-medium hover:bg-gray-800 transition"
+              className="px-4 py-3 bg-gray-700 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
             >
               ✉️ Email
             </button>

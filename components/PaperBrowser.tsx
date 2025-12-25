@@ -82,11 +82,55 @@ export default function PaperBrowser({ papers }: Props) {
 
   return (
     <div>
+      {/* Paper Display - NOW AT THE TOP */}
+      {selectedPaper ? (
+        <div className="mb-8">
+          <PaperCard paper={selectedPaper} />
+          {sortBy === 'random' && filteredPapers.length > 1 && (
+            <div className="text-center mt-6">
+              <button
+                onClick={handleNewRandom}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-md"
+              >
+                Show Another Random Paper
+              </button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">No Papers Found</h2>
+          <p className="text-gray-600 mb-6">
+            No papers match your current filters. Try adjusting your criteria.
+          </p>
+          <button
+            onClick={handleReset}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+          >
+            Reset Filters
+          </button>
+        </div>
+      )}
+
+      {/* Results Info */}
+      <div className="text-center mb-4">
+        <p className="text-sm text-gray-600">
+          Showing{' '}
+          <span className="font-semibold text-gray-900">{filteredPapers.length}</span>{' '}
+          {filteredPapers.length === 1 ? 'paper' : 'papers'}
+          {sortBy !== 'random' && (
+            <span className="text-gray-500 ml-2">
+              (sorted by {sortBy})
+            </span>
+          )}
+        </p>
+      </div>
+
       {/* Toggle Stats Button */}
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-3">
         <button
           onClick={() => setShowStats(!showStats)}
-          className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition"
+          className="px-3 py-1.5 text-xs font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition"
         >
           {showStats ? 'Hide' : 'Show'} Statistics
         </button>
@@ -109,50 +153,6 @@ export default function PaperBrowser({ papers }: Props) {
         onSortChange={setSortBy}
         onReset={handleReset}
       />
-
-      {/* Results Info */}
-      <div className="text-center mb-6">
-        <p className="text-gray-600">
-          Showing{' '}
-          <span className="font-semibold text-gray-900">{filteredPapers.length}</span>{' '}
-          {filteredPapers.length === 1 ? 'paper' : 'papers'}
-          {sortBy !== 'random' && (
-            <span className="text-sm text-gray-500 ml-2">
-              (sorted by {sortBy})
-            </span>
-          )}
-        </p>
-      </div>
-
-      {/* Paper Display */}
-      {selectedPaper ? (
-        <div>
-          <PaperCard paper={selectedPaper} />
-          {sortBy === 'random' && filteredPapers.length > 1 && (
-            <div className="text-center mt-4">
-              <button
-                onClick={handleNewRandom}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
-              >
-                Show Another Random Paper
-              </button>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">No Papers Found</h2>
-          <p className="text-gray-600 mb-6">
-            No papers match your current filters. Try adjusting your criteria.
-          </p>
-          <button
-            onClick={handleReset}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
-          >
-            Reset Filters
-          </button>
-        </div>
-      )}
     </div>
   );
 }

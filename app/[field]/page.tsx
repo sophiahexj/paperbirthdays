@@ -20,6 +20,12 @@ export default async function FieldPage({ params }: PageProps) {
   const { field } = await params;
   const fieldName = decodeURIComponent(field);
 
+  // Capitalize field name properly (e.g., "environmental science" -> "Environmental Science")
+  const capitalizedFieldName = fieldName
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
   // Fetch data from local JSON file
   const filePath = path.join(process.cwd(), 'public', 'data', `${today}.json`);
 
@@ -64,14 +70,14 @@ export default async function FieldPage({ params }: PageProps) {
 
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-2 text-gray-900">
-            {fieldName} Papers
+            {capitalizedFieldName} Papers
           </h1>
           <p className="text-xl text-gray-600">
             Published on <span className="font-semibold">{todayFormatted}</span>
           </p>
           <p className="text-sm text-gray-500 mt-2">
             {fieldPapers.length} {fieldPapers.length === 1 ? 'paper' : 'papers'} in{' '}
-            {fieldName}
+            {capitalizedFieldName}
           </p>
         </header>
 
@@ -103,7 +109,7 @@ export default async function FieldPage({ params }: PageProps) {
           <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">No Papers Found</h2>
             <p className="text-gray-600 mb-6">
-              No {fieldName} papers found for {todayFormatted}.
+              No {capitalizedFieldName} papers found for {todayFormatted}.
             </p>
             <Link
               href="/"
