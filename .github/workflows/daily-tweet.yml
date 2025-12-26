@@ -2,8 +2,10 @@ name: Daily Paper Birthday Tweet
 
 on:
   schedule:
-    # Run every day at 9:00 AM UTC (adjust time as needed)
-    - cron: '0 9 * * *'
+    # Run 3 times daily at 9am EST, 1pm EST, and 5pm EST
+    - cron: '0 14 * * *'  # 9am EST (2pm UTC)
+    - cron: '0 18 * * *'  # 1pm EST (6pm UTC)
+    - cron: '0 22 * * *'  # 5pm EST (10pm UTC)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
