@@ -88,7 +88,22 @@ def get_prioritized_dates():
 def run_command(cmd):
     """Run command and return success status"""
     try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+        # Get the project directory (parent of scripts/)
+        project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+        result = subprocess.run(
+            cmd,
+            shell=True,
+            capture_output=True,
+            text=True,
+            timeout=600,  # 10 minutes per date
+            cwd=project_dir,  # Run from project root
+            env=os.environ.copy()  # Pass current environment (includes .env vars)
+        )
+        if result.returncode != 0:
+            # Print stderr if command failed
+            if result.stderr:
+                print(f"    ERROR: {result.stderr[:500]}")  # First 500 chars of error
         return result.returncode == 0, result.stdout
     except subprocess.TimeoutExpired:
         print("    TIMEOUT - skipping")
@@ -129,7 +144,7 @@ def main():
         print("✓ All dates already ingested!")
         return
 
-    input("Press Enter to start, or Ctrl+C to cancel...")
+    print("Starting ingestion...")
     print()
 
     for i, date_str in enumerate(remaining, 1):

@@ -1,0 +1,22 @@
+======================================================================
+SMART INCREMENTAL INGESTION FOR ALL 365 DATES
+======================================================================
+
+Strategy:
+  1. Prioritizes dates around today (±14 days)
+  2. Then popular birthday months (Sept, Aug, July, June)
+  3. Then holiday season (Dec, Jan, Feb)
+  4. Then remaining dates
+
+You can stop this anytime (Ctrl+C) and resume later
+======================================================================
+
+Already completed: 0 dates
+
+Remaining: 366 dates
+Estimated time: 732 - 1464 minutes
+
+Starting ingestion...
+
+[1/366] Dec 12 (12-12)
+  → Ingesting papers...

@@ -84,6 +84,11 @@ def ingest_papers(month, day, year_start=2015, year_end=2024):
                     if actual_pub_date != date_str:
                         continue  # Skip papers with wrong dates
 
+                    # CRITICAL: Only keep papers with MORE than 100 citations
+                    citation_count = paper.get('citationCount', 0) or 0
+                    if citation_count <= 100:
+                        continue  # Skip papers with too few citations
+
                     # Extract month-day from actual publication date
                     try:
                         parts = actual_pub_date.split('-')
