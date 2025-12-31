@@ -5,3 +5,3897 @@ Target: 1M+ papers
 
 [1/60] Processing file 1...
 Started: Wed Dec 31 11:56:09 GMT 2025
+✓ Connected to database
+
+🚀 Processing 60 files from Semantic Scholar bulk dataset
+======================================================================
+
+[1/60] Downloading and processing...
+  Processed: 7,286 | With dates: 4,611 | Inserted: 1,000  Processed: 14,348 | With dates: 9,056 | Inserted: 2,000  Processed: 21,429 | With dates: 13,487 | Inserted: 3,000  Processed: 28,004 | With dates: 17,615 | Inserted: 4,000  Processed: 35,024 | With dates: 22,013 | Inserted: 5,000  Processed: 41,584 | With dates: 26,143 | Inserted: 6,000  Processed: 48,595 | With dates: 30,545 | Inserted: 7,000  Processed: 55,727 | With dates: 35,017 | Inserted: 8,000  Processed: 62,645 | With dates: 39,276 | Inserted: 9,000  Processed: 69,557 | With dates: 43,502 | Inserted: 10,000  Processed: 76,468 | With dates: 47,935 | Inserted: 11,000  Processed: 83,112 | With dates: 52,109 | Inserted: 12,000  Processed: 89,805 | With dates: 56,327 | Inserted: 13,000  Processed: 96,401 | With dates: 60,504 | Inserted: 14,000  Processed: 103,299 | With dates: 64,783 | Inserted: 15,000  Processed: 110,054 | With dates: 69,008 | Inserted: 16,000  Processed: 116,655 | With dates: 73,181 | Inserted: 17,000  Processed: 123,725 | With dates: 77,604 | Inserted: 18,000  Processed: 130,503 | With dates: 81,840 | Inserted: 19,000  Processed: 137,192 | With dates: 86,060 | Inserted: 20,000  Processed: 143,666 | With dates: 90,091 | Inserted: 21,000  Processed: 150,731 | With dates: 94,555 | Inserted: 22,000  Processed: 157,710 | With dates: 98,894 | Inserted: 23,000  Processed: 164,873 | With dates: 103,380 | Inserted: 24,000  Processed: 171,657 | With dates: 107,634 | Inserted: 25,000  Processed: 178,508 | With dates: 111,943 | Inserted: 26,000  Processed: 185,368 | With dates: 116,210 | Inserted: 27,000  Processed: 192,046 | With dates: 120,381 | Inserted: 28,000  Processed: 199,037 | With dates: 124,771 | Inserted: 29,000  Processed: 206,058 | With dates: 129,134 | Inserted: 30,000  Processed: 213,021 | With dates: 133,517 | Inserted: 31,000  Processed: 220,186 | With dates: 138,012 | Inserted: 32,000  Processed: 227,155 | With dates: 142,401 | Inserted: 33,000  Processed: 233,938 | With dates: 146,673 | Inserted: 34,000  Processed: 240,616 | With dates: 150,799 | Inserted: 35,000  Processed: 247,500 | With dates: 155,114 | Inserted: 36,000  Processed: 254,067 | With dates: 159,264 | Inserted: 37,000  Processed: 260,784 | With dates: 163,421 | Inserted: 38,000  Processed: 267,786 | With dates: 167,809 | Inserted: 39,000  Processed: 274,579 | With dates: 172,080 | Inserted: 40,000  Processed: 281,499 | With dates: 176,424 | Inserted: 41,000  Processed: 288,115 | With dates: 180,618 | Inserted: 42,000  Processed: 294,960 | With dates: 184,881 | Inserted: 43,000  Processed: 301,888 | With dates: 189,159 | Inserted: 44,000  Processed: 308,994 | With dates: 193,613 | Inserted: 45,000  Processed: 315,773 | With dates: 197,844 | Inserted: 46,000  Processed: 322,759 | With dates: 202,208 | Inserted: 47,000  Processed: 329,649 | With dates: 206,449 | Inserted: 48,000  Processed: 336,417 | With dates: 210,636 | Inserted: 49,000  Processed: 343,058 | With dates: 214,848 | Inserted: 50,000  Processed: 349,876 | With dates: 219,077 | Inserted: 51,000  Processed: 356,710 | With dates: 223,393 | Inserted: 52,000  Processed: 363,338 | With dates: 227,550 | Inserted: 53,000  Processed: 369,894 | With dates: 231,662 | Inserted: 54,000  Processed: 377,112 | With dates: 236,183 | Inserted: 55,000  Processed: 383,868 | With dates: 240,480 | Inserted: 56,000  Processed: 390,443 | With dates: 244,585 | Inserted: 57,000  Processed: 397,233 | With dates: 248,776 | Inserted: 58,000  Processed: 404,144 | With dates: 253,129 | Inserted: 59,000  Processed: 410,797 | With dates: 257,276 | Inserted: 60,000  Processed: 417,805 | With dates: 261,640 | Inserted: 61,000  Processed: 424,546 | With dates: 265,812 | Inserted: 62,000  Processed: 431,312 | With dates: 270,059 | Inserted: 63,000  Processed: 438,075 | With dates: 274,316 | Inserted: 64,000  Processed: 445,130 | With dates: 278,753 | Inserted: 65,000  Processed: 451,883 | With dates: 282,981 | Inserted: 66,000  Processed: 458,382 | With dates: 287,076 | Inserted: 67,000  Processed: 465,081 | With dates: 291,306 | Inserted: 68,000  Processed: 471,693 | With dates: 295,427 | Inserted: 69,000  Processed: 478,534 | With dates: 299,680 | Inserted: 70,000  Processed: 485,374 | With dates: 303,940 | Inserted: 71,000  Processed: 492,205 | With dates: 308,236 | Inserted: 72,000  Processed: 498,829 | With dates: 312,437 | Inserted: 73,000  Processed: 505,792 | With dates: 316,857 | Inserted: 74,000  Processed: 512,161 | With dates: 320,882 | Inserted: 75,000  Processed: 518,629 | With dates: 324,954 | Inserted: 76,000  Processed: 525,230 | With dates: 329,132 | Inserted: 77,000  Processed: 532,180 | With dates: 333,433 | Inserted: 78,000  Processed: 539,131 | With dates: 337,730 | Inserted: 79,000  Processed: 545,719 | With dates: 341,884 | Inserted: 80,000  Processed: 552,572 | With dates: 346,252 | Inserted: 81,000  Processed: 559,772 | With dates: 350,726 | Inserted: 82,000  Processed: 566,512 | With dates: 355,000 | Inserted: 83,000  Processed: 572,918 | With dates: 359,035 | Inserted: 84,000  Processed: 579,631 | With dates: 363,237 | Inserted: 85,000  Processed: 586,469 | With dates: 367,451 | Inserted: 86,000  Processed: 593,171 | With dates: 371,675 | Inserted: 87,000  Processed: 599,835 | With dates: 375,862 | Inserted: 88,000  Processed: 607,001 | With dates: 380,293 | Inserted: 89,000  Processed: 613,886 | With dates: 384,606 | Inserted: 90,000  Processed: 620,484 | With dates: 388,732 | Inserted: 91,000  Processed: 627,194 | With dates: 392,939 | Inserted: 92,000  Processed: 633,968 | With dates: 397,215 | Inserted: 93,000  Processed: 640,582 | With dates: 401,347 | Inserted: 94,000  Processed: 647,229 | With dates: 405,537 | Inserted: 95,000  Processed: 653,960 | With dates: 409,722 | Inserted: 96,000  Processed: 660,482 | With dates: 413,763 | Inserted: 97,000  Processed: 667,826 | With dates: 418,360 | Inserted: 98,000  Processed: 674,523 | With dates: 422,555 | Inserted: 99,000  Processed: 681,301 | With dates: 426,832 | Inserted: 100,000  Processed: 688,055 | With dates: 431,091 | Inserted: 101,000  Processed: 694,644 | With dates: 435,227 | Inserted: 102,000  Processed: 701,356 | With dates: 439,450 | Inserted: 103,000  Processed: 708,053 | With dates: 443,644 | Inserted: 104,000  Processed: 714,722 | With dates: 447,919 | Inserted: 105,000  Processed: 721,712 | With dates: 452,296 | Inserted: 106,000  Processed: 728,868 | With dates: 456,776 | Inserted: 107,000  Processed: 735,723 | With dates: 461,050 | Inserted: 108,000  Processed: 742,264 | With dates: 465,182 | Inserted: 109,000  Processed: 749,155 | With dates: 469,546 | Inserted: 110,000  Processed: 756,249 | With dates: 473,913 | Inserted: 111,000  Processed: 763,463 | With dates: 478,398 | Inserted: 112,000  Processed: 770,160 | With dates: 482,624 | Inserted: 113,000  Processed: 777,040 | With dates: 486,899 | Inserted: 114,000  Processed: 783,937 | With dates: 491,271 | Inserted: 115,000  Processed: 790,873 | With dates: 495,621 | Inserted: 116,000  Processed: 798,077 | With dates: 500,075 | Inserted: 117,000  Processed: 804,788 | With dates: 504,308 | Inserted: 118,000  Processed: 811,593 | With dates: 508,608 | Inserted: 119,000  Processed: 818,844 | With dates: 513,037 | Inserted: 120,000  Processed: 825,393 | With dates: 517,205 | Inserted: 121,000  Processed: 832,476 | With dates: 521,641 | Inserted: 122,000  Processed: 839,277 | With dates: 525,868 | Inserted: 123,000  Processed: 845,725 | With dates: 529,987 | Inserted: 124,000  Processed: 852,767 | With dates: 534,384 | Inserted: 125,000  Processed: 859,724 | With dates: 538,761 | Inserted: 126,000  Processed: 866,534 | With dates: 543,070 | Inserted: 127,000  Processed: 873,453 | With dates: 547,379 | Inserted: 128,000  Processed: 880,691 | With dates: 551,870 | Inserted: 129,000  Processed: 887,788 | With dates: 556,330 | Inserted: 130,000  Processed: 894,686 | With dates: 560,621 | Inserted: 131,000  Processed: 901,441 | With dates: 564,951 | Inserted: 132,000  Processed: 908,169 | With dates: 569,248 | Inserted: 133,000  Processed: 914,866 | With dates: 573,476 | Inserted: 134,000  Processed: 922,007 | With dates: 577,932 | Inserted: 135,000  Processed: 929,080 | With dates: 582,334 | Inserted: 136,000  Processed: 935,816 | With dates: 586,554 | Inserted: 137,000  Processed: 942,592 | With dates: 590,824 | Inserted: 138,000  Processed: 949,106 | With dates: 594,945 | Inserted: 139,000  Processed: 956,156 | With dates: 599,374 | Inserted: 140,000  Processed: 963,178 | With dates: 603,733 | Inserted: 141,000  Processed: 969,815 | With dates: 607,898 | Inserted: 142,000  Processed: 976,732 | With dates: 612,194 | Inserted: 143,000  Processed: 983,560 | With dates: 616,476 | Inserted: 144,000  Processed: 990,590 | With dates: 620,865 | Inserted: 145,000  Processed: 997,322 | With dates: 625,072 | Inserted: 146,000
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+
+  Error processing line: connection already closed
+Traceback (most recent call last):
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/response.py", line 899, in _error_catcher
+    yield
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/response.py", line 1045, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(223931464 bytes read, 461228550 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 229, in <module>
+    main()
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 218, in main
+    inserted = process_file_streaming(url, db, i + 1, len(urls))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 69, in process_file_streaming
+    for line in gzip.open(response.raw, 'rt', encoding='utf-8'):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/gzip.py", line 337, in read1
+    return self._buffer.read1(size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/gzip.py", line 534, in read
+    buf = self._fp.read(READ_BUFFER_SIZE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/gzip.py", line 91, in read
+    return self.file.read(size)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/response.py", line 1108, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/response.py", line 1023, in _raw_read
+    with self._error_catcher():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/response.py", line 923, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(223931464 bytes read, 461228550 more expected)', IncompleteRead(223931464 bytes read, 461228550 more expected))
+Total papers in database: 141541
+Completed: Wed Dec 31 15:44:24 GMT 2025
+
+[2/60] Processing file 2...
+Started: Wed Dec 31 15:44:24 GMT 2025
+✓ Connected to database
+
+🚀 Processing 60 files from Semantic Scholar bulk dataset
+======================================================================
+
+[2/60] Downloading and processing...
+Traceback (most recent call last):
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1419, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1419, in getresponse
+    response.begin()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 229, in <module>
+    main()
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 218, in main
+    inserted = process_file_streaming(url, db, i + 1, len(urls))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/scripts/ingest_bulk.py", line 61, in process_file_streaming
+    response = requests.get(url, stream=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sophia/Desktop/paper birthdays/paperbirthdays/venv/lib/python3.12/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Total papers in database: 141541
+Completed: Wed Dec 31 15:51:36 GMT 2025
+
+[3/60] Processing file 3...
+Started: Wed Dec 31 15:51:36 GMT 2025
