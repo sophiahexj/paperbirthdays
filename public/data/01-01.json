@@ -1,0 +1,205 @@
+{
+  "date": "01-01",
+  "total_papers": 18,
+  "papers": [
+    {
+      "id": "8eaa4875f8cb75ff7ed86dcced6d0363c6dde329",
+      "title": "Secondary Metabolites of Actinomycetes and their Antibacterial, Antifungal and Antiviral Properties",
+      "author_count": 5,
+      "year": 2018,
+      "citation_count": 155,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Polish Journal of Microbiology",
+      "url": "https://www.semanticscholar.org/paper/8eaa4875f8cb75ff7ed86dcced6d0363c6dde329"
+    },
+    {
+      "id": "20fcc06e2ef4f3e85cc6c683a88c6ad60ccb5f4b",
+      "title": "Sociodemographic Determinants of COVID-19 Vaccine Hesitancy, Fear of Infection, and Protection Self-Efficacy",
+      "author_count": 6,
+      "year": 2021,
+      "citation_count": 107,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Journal of Primary Care & Community Health",
+      "url": "https://www.semanticscholar.org/paper/20fcc06e2ef4f3e85cc6c683a88c6ad60ccb5f4b"
+    },
+    {
+      "id": "4af51ee158af5dbd6a21b20c153387d8c32a1852",
+      "title": "THE ROLE OF TEACHER PERFORMANCE IN SCHOOL EFFECTIVENESS",
+      "author_count": 1,
+      "year": 2019,
+      "citation_count": 81,
+      "field": "Psychology",
+      "subfield": null,
+      "venue": "International journal of education technology and scientific researches",
+      "url": "https://www.semanticscholar.org/paper/4af51ee158af5dbd6a21b20c153387d8c32a1852"
+    },
+    {
+      "id": "feec497cc603ba77193eee7dc2804e5434e1a75d",
+      "title": "A prospective multicenter trial on sentinel lymph node biopsy in patients with early-stage cervical cancer (SENTIX)",
+      "author_count": 8,
+      "year": 2019,
+      "citation_count": 76,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "International Journal of Gynecologic Cancer",
+      "url": "https://www.semanticscholar.org/paper/feec497cc603ba77193eee7dc2804e5434e1a75d"
+    },
+    {
+      "id": "c02b4f5cb9cef7fd152e52666b93cbc5f7e047b0",
+      "title": "Influence of Night Soccer Matches on Sleep in Elite Players",
+      "author_count": 3,
+      "year": 2019,
+      "citation_count": 36,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Journal of Strength and Conditioning Research",
+      "url": "https://www.semanticscholar.org/paper/c02b4f5cb9cef7fd152e52666b93cbc5f7e047b0"
+    },
+    {
+      "id": "01b501609edb6e284f4c60296b92a0878cf2ee6d",
+      "title": "Small molecule compounds with good anti-inflammatory activity reported in the literature from 01/2009 to 05/2021: a review",
+      "author_count": 5,
+      "year": 2021,
+      "citation_count": 32,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Journal of Enzyme Inhibition and Medicinal Chemistry",
+      "url": "https://www.semanticscholar.org/paper/01b501609edb6e284f4c60296b92a0878cf2ee6d"
+    },
+    {
+      "id": "631f95a3203abd6c70998aa1cdb710a094d12de5",
+      "title": "Safety and immunogenicity of a recombinant interferon-armed RBD dimer vaccine (V-01) for COVID-19 in healthy adults: a randomized, double-blind, placebo-controlled, Phase I trial",
+      "author_count": 19,
+      "year": 2021,
+      "citation_count": 31,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Emerging Microbes and Infections",
+      "url": "https://www.semanticscholar.org/paper/631f95a3203abd6c70998aa1cdb710a094d12de5"
+    },
+    {
+      "id": "6ffbb33e28519aa9636dd6a40d0fda48ca80ef3b",
+      "title": "Modelling the Implications of Delayed Payments on Contractors’ Cashflows on Infrastructure Projects",
+      "author_count": 4,
+      "year": 2023,
+      "citation_count": 21,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/6ffbb33e28519aa9636dd6a40d0fda48ca80ef3b"
+    },
+    {
+      "id": "481937c32a1e71b665a4496002142b0871e22c93",
+      "title": "Numerical Simulation of the Stability of Rock Mass around Large Underground Cavern",
+      "author_count": 3,
+      "year": 2022,
+      "citation_count": 21,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/481937c32a1e71b665a4496002142b0871e22c93"
+    },
+    {
+      "id": "0b51ebe3a4f55bb6606f1f648550ddd14ef42cae",
+      "title": "Creation and Spatial Analysis of 3D City Modeling based on GIS Data",
+      "author_count": 3,
+      "year": 2022,
+      "citation_count": 17,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/0b51ebe3a4f55bb6606f1f648550ddd14ef42cae"
+    },
+    {
+      "id": "2f883ec296d33d836aceee3523bc923ce8f466cc",
+      "title": "Maritime Climate in the Canary Islands and its Implications for the Construction of Coastal Infrastructures",
+      "author_count": 3,
+      "year": 2022,
+      "citation_count": 17,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/2f883ec296d33d836aceee3523bc923ce8f466cc"
+    },
+    {
+      "id": "d1998269c84761f40b5bba1d0ec0dfa121d5b1bf",
+      "title": "Engineering Properties of Concrete Made with Coal Bottom Ash as Sustainable Construction Materials",
+      "author_count": 6,
+      "year": 2022,
+      "citation_count": 13,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/d1998269c84761f40b5bba1d0ec0dfa121d5b1bf"
+    },
+    {
+      "id": "50f514e14979aa87523870c6cb9c0b594fe9b91d",
+      "title": "Performance Comparison of Crossflow Turbine Configuration Upper Blade Convex and Curvature by Computational Method",
+      "author_count": 6,
+      "year": 2023,
+      "citation_count": 13,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/50f514e14979aa87523870c6cb9c0b594fe9b91d"
+    },
+    {
+      "id": "da7546446a86d77cb29f724b7b9b47fcdaf5f6a3",
+      "title": "Intelligent Control Methodology for Smart Highway Bridge Structures Using Optimal Replicator Dynamic Controller",
+      "author_count": 2,
+      "year": 2023,
+      "citation_count": 13,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/da7546446a86d77cb29f724b7b9b47fcdaf5f6a3"
+    },
+    {
+      "id": "6a5a9a7e636876ead64ed6cfffcf9f5fd12eb680",
+      "title": "Effects of Acupuncture and Moxibustion on Breast Cancer-Related Lymphedema: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+      "author_count": 7,
+      "year": 2021,
+      "citation_count": 12,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Integrative Cancer Therapies",
+      "url": "https://www.semanticscholar.org/paper/6a5a9a7e636876ead64ed6cfffcf9f5fd12eb680"
+    },
+    {
+      "id": "857bac3b2170fcab2ad054f61414eccbda104819",
+      "title": "Peat Soil Compaction Characteristic and Physicochemical Changes Treated with Eco-Processed Pozzolan (EPP)",
+      "author_count": 2,
+      "year": 2023,
+      "citation_count": 11,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/857bac3b2170fcab2ad054f61414eccbda104819"
+    },
+    {
+      "id": "75243d3cf56bea640b2d50df67fb645d080d9273",
+      "title": "Statistical Analysis Approaches in Scour Depth of Bridge Piers",
+      "author_count": 4,
+      "year": 2023,
+      "citation_count": 11,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/75243d3cf56bea640b2d50df67fb645d080d9273"
+    },
+    {
+      "id": "7b696dea595e173ab9d8cf9cd35c6f76b6d332f9",
+      "title": "Extreme Event-based Rainfall-runoff Simulation Utilizing GIS Techniques in Irawan Watershed, Palawan, Philippines",
+      "author_count": 3,
+      "year": 2023,
+      "citation_count": 11,
+      "field": "Other",
+      "subfield": null,
+      "venue": "Civil Engineering Journal",
+      "url": "https://www.semanticscholar.org/paper/7b696dea595e173ab9d8cf9cd35c6f76b6d332f9"
+    }
+  ],
+  "last_updated": "2025-12-31T09:25:33.753654"
+}

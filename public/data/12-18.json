@@ -1,0 +1,29 @@
+{
+  "date": "12-18",
+  "total_papers": 2,
+  "papers": [
+    {
+      "id": "7e7280f94c102361a84708364df549abd3857d27",
+      "title": "Adolescent Girls’ Perceptions of Physical Activity: A Systematic Review of Qualitative Studies",
+      "author_count": 3,
+      "year": 2018,
+      "citation_count": 101,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "American Journal of Health Promotion",
+      "url": "https://www.semanticscholar.org/paper/7e7280f94c102361a84708364df549abd3857d27"
+    },
+    {
+      "id": "6b838d4de0cb7d16fdb516eac195d560a5b8f807",
+      "title": "Home-based chemically-induced whitening (bleaching) of teeth in adults.",
+      "author_count": 5,
+      "year": 2018,
+      "citation_count": 43,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.semanticscholar.org/paper/6b838d4de0cb7d16fdb516eac195d560a5b8f807"
+    }
+  ],
+  "last_updated": "2025-12-26T22:41:44.478867"
+}

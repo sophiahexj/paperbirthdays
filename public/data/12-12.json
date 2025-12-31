@@ -1,0 +1,40 @@
+{
+  "date": "12-12",
+  "total_papers": 3,
+  "papers": [
+    {
+      "id": "b5cb222136331144f47c4fbb8e2d7de8da612804",
+      "title": "Emotional intelligence predicts academic performance: A meta-analysis.",
+      "author_count": 6,
+      "year": 2019,
+      "citation_count": 661,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Psychological bulletin",
+      "url": "https://www.semanticscholar.org/paper/b5cb222136331144f47c4fbb8e2d7de8da612804"
+    },
+    {
+      "id": "9731bcf74a3801eb7b93e56c3b9f9ef45412d97d",
+      "title": "Suicide among physicians and health-care workers: A systematic review and meta-analysis",
+      "author_count": 10,
+      "year": 2019,
+      "citation_count": 393,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "PLoS ONE",
+      "url": "https://www.semanticscholar.org/paper/9731bcf74a3801eb7b93e56c3b9f9ef45412d97d"
+    },
+    {
+      "id": "4d182e1f35d0df3e058b3c680b0a1d430c70bd6f",
+      "title": "Effect of diurnal fasting on sleep during Ramadan: a systematic review and meta-analysis",
+      "author_count": 8,
+      "year": 2019,
+      "citation_count": 117,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "Sleep and Breathing",
+      "url": "https://www.semanticscholar.org/paper/4d182e1f35d0df3e058b3c680b0a1d430c70bd6f"
+    }
+  ],
+  "last_updated": "2025-12-26T22:13:56.225517"
+}

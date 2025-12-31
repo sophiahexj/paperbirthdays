@@ -1,0 +1,29 @@
+{
+  "date": "12-13",
+  "total_papers": 2,
+  "papers": [
+    {
+      "id": "b963890072ce4a9139c9937266b716bc7a6191f8",
+      "title": "Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation",
+      "author_count": 8,
+      "year": 2020,
+      "citation_count": 1138,
+      "field": "Computer Science",
+      "subfield": null,
+      "venue": "Computer Vision and Pattern Recognition",
+      "url": "https://www.semanticscholar.org/paper/b963890072ce4a9139c9937266b716bc7a6191f8"
+    },
+    {
+      "id": "4db5391a901db05b5501cfd1f831bf1211334567",
+      "title": "Anatomical Variation in Maxillary Sinus Ostium Positioning: Implications for Nasal‐Sinus Disease",
+      "author_count": 3,
+      "year": 2018,
+      "citation_count": 21,
+      "field": "Biology",
+      "subfield": null,
+      "venue": "The Anatomical Record",
+      "url": "https://www.semanticscholar.org/paper/4db5391a901db05b5501cfd1f831bf1211334567"
+    }
+  ],
+  "last_updated": "2025-12-26T22:16:14.142185"
+}
