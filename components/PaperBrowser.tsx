@@ -30,7 +30,7 @@ export default function PaperBrowser({ papers, allFields }: Props) {
   // Filter state - initialize with actual year range
   const [selectedField, setSelectedField] = useState<string>('all');
   const [selectedYearRange, setSelectedYearRange] = useState<[number, number]>(yearRange);
-  const [minCitations, setMinCitations] = useState<number>(100); // Quality minimum: only show high-impact papers
+  const [minCitations, setMinCitations] = useState<number>(0); // Show all papers by default
   const [sortBy, setSortBy] = useState<'random' | 'citations' | 'year' | 'authors'>('random');
 
   // Display state
@@ -74,7 +74,7 @@ export default function PaperBrowser({ papers, allFields }: Props) {
   const handleReset = () => {
     setSelectedField('all');
     setSelectedYearRange(yearRange);
-    setMinCitations(100); // Reset to quality minimum
+    setMinCitations(0); // Reset to show all papers
     setSortBy('random');
   };
 
