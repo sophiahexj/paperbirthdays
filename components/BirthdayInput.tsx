@@ -69,7 +69,7 @@ export default function BirthdayInput() {
           🎂 Find Your Birthday Papers
         </h3>
         <p className="font-body text-sm text-text-secondary">
-          Discover academic papers published on your birthday
+          Discover papers that share your birthday!
         </p>
       </div>
 
@@ -144,11 +144,6 @@ export default function BirthdayInput() {
         )}
       </form>
 
-      <div className="mt-4 pt-4 border-t border-border/50">
-        <p className="text-xs text-text-muted text-center">
-          Example: August 8 → see papers published on every August 8th throughout history
-        </p>
-      </div>
     </div>
   );
 }
