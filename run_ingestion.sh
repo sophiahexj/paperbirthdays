@@ -5,8 +5,12 @@ set -e
 
 echo "🚀 Starting Railway ingestion worker..."
 
-# Install dependencies
-pip install -q psycopg2-binary requests python-dotenv
+# Install dependencies (try multiple pip commands)
+python3 -m pip install -q psycopg2-binary requests python-dotenv || \
+pip3 install -q psycopg2-binary requests python-dotenv || \
+python -m pip install -q psycopg2-binary requests python-dotenv
+
+echo "✅ Dependencies installed"
 
 # Run the auto-ingestion script
 python3 railway_auto.py
