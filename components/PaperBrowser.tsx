@@ -8,6 +8,7 @@ import FilterPanel from './FilterPanel';
 import StatsPanel from './StatsPanel';
 import FieldNavigation from './FieldNavigation';
 import ShareModal from './ShareModal';
+import BirthdayInput from './BirthdayInput';
 
 interface Props {
   papers: Paper[];
@@ -136,6 +137,11 @@ export default function PaperBrowser({ papers, allFields }: Props) {
 
       {/* Statistics Panel */}
       {showStats && <StatsPanel papers={filteredPapers} />}
+
+      {/* Birthday Input - Find papers by your birthday */}
+      <div className="mb-8">
+        <BirthdayInput />
+      </div>
 
       {/* Filter Panel */}
       <FilterPanel

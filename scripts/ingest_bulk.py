@@ -11,6 +11,7 @@ import psycopg2
 import requests
 from datetime import datetime
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
@@ -21,10 +22,11 @@ def normalize_field(fields_of_study):
         return 'Other'
 
     field_mapping = {
+        'Medicine': ['Medicine'],
+        'Biology': ['Biology'],
         'Computer Science': ['Computer Science'],
         'Economics': ['Economics', 'Business'],
         'Physics': ['Physics'],
-        'Biology': ['Biology', 'Medicine'],
         'Mathematics': ['Mathematics'],
         'Psychology': ['Psychology'],
         'Engineering': ['Engineering'],
@@ -57,9 +59,21 @@ def process_file_streaming(url, db_connection, file_num, total_files):
 
     print(f"\n[{file_num}/{total_files}] Downloading and processing...")
 
-    # Stream download the gzipped file
-    response = requests.get(url, stream=True)
-    response.raise_for_status()
+    # Stream download the gzipped file with retries
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, stream=True, timeout=30)
+            response.raise_for_status()
+            break
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            if attempt < max_retries - 1:
+                wait_time = (attempt + 1) * 10
+                print(f"  Connection error, retrying in {wait_time}s... (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait_time)
+            else:
+                print(f"  Failed after {max_retries} attempts: {e}")
+                raise
 
     total_papers = 0
     inserted_papers = 0
