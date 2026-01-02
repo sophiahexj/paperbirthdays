@@ -38,16 +38,18 @@ def normalize_field(fields_of_study):
         'History': ['History'],
     }
 
-    for category, keywords in field_mapping.items():
-        for field in fields_of_study:
-            if isinstance(field, dict):
-                field_name = field.get('category', '')
-            else:
-                field_name = str(field)
+    # Use the FIRST field (primary field) instead of all fields
+    # This prevents misclassification when Medicine is a secondary field
+    primary_field = fields_of_study[0]
+    if isinstance(primary_field, dict):
+        field_name = primary_field.get('category', '')
+    else:
+        field_name = str(primary_field)
 
-            for keyword in keywords:
-                if keyword.lower() in field_name.lower():
-                    return category
+    for category, keywords in field_mapping.items():
+        for keyword in keywords:
+            if keyword.lower() in field_name.lower():
+                return category
 
     return 'Other'
 

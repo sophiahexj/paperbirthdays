@@ -26,6 +26,39 @@ class JSONGenerator:
         # Ensure output directory exists
         os.makedirs(self.output_dir, exist_ok=True)
 
+    def normalize_field(self, fields_of_study):
+        """Map primary field to canonical category (uses FIRST field only)"""
+        if not fields_of_study or len(fields_of_study) == 0:
+            return 'Other'
+
+        field_mapping = {
+            'Medicine': ['Medicine'],
+            'Biology': ['Biology'],
+            'Computer Science': ['Computer Science'],
+            'Economics': ['Economics', 'Business'],
+            'Physics': ['Physics'],
+            'Mathematics': ['Mathematics'],
+            'Psychology': ['Psychology'],
+            'Engineering': ['Engineering'],
+            'Chemistry': ['Chemistry', 'Materials Science'],
+            'Environmental Science': ['Environmental Science', 'Geology', 'Geography'],
+            'Political Science': ['Political Science', 'Sociology'],
+            'Art': ['Art'],
+            'Philosophy': ['Philosophy'],
+            'History': ['History'],
+        }
+
+        # Use the FIRST field (primary field) to prevent misclassification
+        primary_field = fields_of_study[0]
+        field_name = str(primary_field)
+
+        for category, keywords in field_mapping.items():
+            for keyword in keywords:
+                if keyword.lower() in field_name.lower():
+                    return category
+
+        return 'Other'
+
     def fetch_papers_for_date(self, month_day: str) -> List[Dict]:
         """Query database for papers on a specific MM-DD"""
         cursor = self.db.cursor()
@@ -33,7 +66,7 @@ class JSONGenerator:
         cursor.execute("""
             SELECT
                 paper_id, title, author_count, year, citation_count,
-                field, subfield, venue, url
+                fields_of_study, subfield, venue, url
             FROM papers
             WHERE publication_month_day = %s
             ORDER BY citation_count DESC
@@ -41,13 +74,16 @@ class JSONGenerator:
 
         papers = []
         for row in cursor.fetchall():
+            # Calculate correct field from fields_of_study array
+            correct_field = self.normalize_field(row[5])
+
             papers.append({
                 'id': row[0],
                 'title': row[1],
                 'author_count': row[2],
                 'year': row[3],
                 'citation_count': row[4],
-                'field': row[5] or 'Unknown',
+                'field': correct_field,
                 'subfield': row[6],
                 'venue': row[7] or 'Unknown Venue',
                 'url': row[8] or 'https://example.com'
