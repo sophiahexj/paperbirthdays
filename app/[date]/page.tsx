@@ -1,6 +1,6 @@
 import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
 import { Paper } from '@/types/paper';
-import PaperCard from '@/components/PaperCard';
+import DatePaperDisplay from '@/components/DatePaperDisplay';
 import { getPapersForDate } from '@/lib/database';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -151,20 +151,8 @@ export default async function DatePage({ params }: PageProps) {
           </p>
         </header>
 
-        {/* Paper Card */}
-        <PaperCard paper={randomPaper} />
-
-        {/* More papers link */}
-        {papers.length > 1 && (
-          <div className="text-center mt-8">
-            <Link
-              href={`/?date=${monthDay}`}
-              className="inline-block px-6 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent-light transition-all duration-150 font-medium"
-            >
-              See All {papers.length} Papers from This Birthday
-            </Link>
-          </div>
-        )}
+        {/* Paper Display with Shuffle and Stats */}
+        <DatePaperDisplay papers={papers} initialPaper={randomPaper} />
       </div>
     </main>
   );
