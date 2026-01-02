@@ -65,22 +65,36 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Most Cited */}
-        <div className="bg-surface rounded-lg p-4 border border-border">
-          <h3 className="font-body font-semibold text-text-primary mb-2">Most Cited</h3>
+        <a
+          href={mostCited.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-surface rounded-lg p-4 border border-border hover:border-accent hover:bg-accent-light/20 transition-all cursor-pointer group"
+        >
+          <h3 className="font-body font-semibold text-text-primary mb-2 group-hover:text-accent transition-colors">
+            Most Cited
+          </h3>
           <p className="font-body text-sm text-text-secondary line-clamp-2">{mostCited.title}</p>
           <p className="font-body text-xs text-text-muted mt-1">
             {mostCited.citation_count.toLocaleString()} citations • {mostCited.year}
           </p>
-        </div>
+        </a>
 
         {/* Oldest */}
-        <div className="bg-surface rounded-lg p-4 border border-border">
-          <h3 className="font-body font-semibold text-text-primary mb-2">Oldest Paper</h3>
+        <a
+          href={oldest.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-surface rounded-lg p-4 border border-border hover:border-accent hover:bg-accent-light/20 transition-all cursor-pointer group"
+        >
+          <h3 className="font-body font-semibold text-text-primary mb-2 group-hover:text-accent transition-colors">
+            Oldest Paper
+          </h3>
           <p className="font-body text-sm text-text-secondary line-clamp-2">{oldest.title}</p>
           <p className="font-body text-xs text-text-muted mt-1">
             {oldest.year} • {oldest.citation_count.toLocaleString()} citations
           </p>
-        </div>
+        </a>
       </div>
 
       {/* Field Distribution */}

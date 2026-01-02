@@ -26,6 +26,9 @@ export async function getPapersForDate(monthDay: string): Promise<Paper[]> {
       fields_of_study, subfield, venue, url
     FROM papers
     WHERE publication_month_day = $1
+      AND venue IS NOT NULL
+      AND venue != 'Unknown Venue'
+      AND TRIM(venue) != ''
     ORDER BY citation_count DESC
   `, [monthDay]);
 
