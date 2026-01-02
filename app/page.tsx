@@ -1,8 +1,7 @@
 import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
-import { DailyPapers } from '@/types/paper';
 import PaperBrowser from '@/components/PaperBrowser';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { getPapersForDate } from '@/lib/database';
+import { Paper } from '@/types/paper';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -10,22 +9,15 @@ export default async function Home() {
   const today = getTodayMMDD();
   const todayFormatted = formatDateForDisplay(today);
 
-  // Fetch data from local JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', `${today}.json`);
-
-  let data: DailyPapers;
+  // Fetch papers from database
+  let papers: Paper[];
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    data = JSON.parse(fileContents);
+    papers = await getPapersForDate(today);
   } catch (error) {
-    // Fallback if today's file doesn't exist yet
-    console.error(`No data file found for ${today}`, error);
-    data = {
-      date: today,
-      total_papers: 0,
-      papers: [],
-    };
+    // Fallback if database query fails
+    console.error(`Error fetching papers for ${today}`, error);
+    papers = [];
   }
 
   const currentYear = new Date().getFullYear();
@@ -40,9 +32,9 @@ export default async function Home() {
           <p className="font-body text-sm sm:text-base uppercase tracking-[0.15em] text-accent mb-4">
             ✨ {todayFormatted} ✨
           </p>
-          {data.total_papers > 0 ? (
+          {papers.length > 0 ? (
             <p className="text-sm text-text-muted">
-              {data.total_papers} {data.total_papers === 1 ? 'paper shares' : 'papers share'} this birthday
+              {papers.length} {papers.length === 1 ? 'paper shares' : 'papers share'} this birthday
             </p>
           ) : (
             <p className="text-sm text-text-muted">
@@ -51,10 +43,10 @@ export default async function Home() {
           )}
         </header>
 
-        {data.total_papers > 0 ? (
+        {papers.length > 0 ? (
           <PaperBrowser
-            papers={data.papers}
-            allFields={Array.from(new Set(data.papers.map(p => p.field))).sort()}
+            papers={papers}
+            allFields={Array.from(new Set(papers.map(p => p.field))).sort()}
           />
         ) : (
           <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">

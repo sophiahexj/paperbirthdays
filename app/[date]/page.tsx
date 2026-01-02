@@ -1,8 +1,7 @@
 import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
-import { DailyPapers, Paper } from '@/types/paper';
+import { Paper } from '@/types/paper';
 import PaperCard from '@/components/PaperCard';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { getPapersForDate } from '@/lib/database';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -47,14 +46,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const monthDay = `${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
-  const filePath = path.join(process.cwd(), 'public', 'data', `${monthDay}.json`);
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    const data: DailyPapers = JSON.parse(fileContents);
+    // Fetch papers from database
+    let papers = await getPapersForDate(monthDay);
 
     // Filter by year if specified
-    let papers = data.papers;
     if (parsed.year) {
       papers = papers.filter(p => p.year === parsed.year);
     }
@@ -108,20 +105,16 @@ export default async function DatePage({ params }: PageProps) {
   const formattedDate = formatDateForDisplay(monthDay);
   const yearText = parsed.year ? ` ${parsed.year}` : '';
 
-  // Fetch data from local JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', `${monthDay}.json`);
-
-  let data: DailyPapers;
+  // Fetch papers from database
+  let papers: Paper[];
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    data = JSON.parse(fileContents);
+    papers = await getPapersForDate(monthDay);
   } catch (error) {
     notFound();
   }
 
   // Filter by year if specified
-  let papers = data.papers;
   if (parsed.year) {
     papers = papers.filter(p => p.year === parsed.year);
   }
