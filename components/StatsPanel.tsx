@@ -28,6 +28,7 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
   papers.forEach((p) => {
     fieldCounts[p.field] = (fieldCounts[p.field] || 0) + 1;
   });
+  const totalFields = Object.keys(fieldCounts).length;
   const topFields = Object.entries(fieldCounts)
     .sort(([, a], [, b]) => b - a)
     .slice(0, 5);
@@ -57,7 +58,7 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
         </div>
 
         <div className="bg-surface rounded-lg p-4 border border-border">
-          <div className="font-display text-2xl font-semibold text-accent">{topFields.length}</div>
+          <div className="font-display text-2xl font-semibold text-accent">{totalFields}</div>
           <div className="font-body text-sm text-text-secondary">Fields</div>
         </div>
       </div>
