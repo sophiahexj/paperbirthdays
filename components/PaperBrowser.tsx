@@ -34,6 +34,11 @@ export default function PaperBrowser({ papers, allFields }: Props) {
   const [minCitations, setMinCitations] = useState<number>(0); // Show all papers by default
   const [sortBy, setSortBy] = useState<'random' | 'citations' | 'year' | 'authors'>('random');
 
+  // Sync selectedYearRange with yearRange when it changes
+  useEffect(() => {
+    setSelectedYearRange(yearRange);
+  }, [yearRange]);
+
   // Display state
   const [selectedPaper, setSelectedPaper] = useState<Paper | null>(null);
   const [showStats, setShowStats] = useState(false);
