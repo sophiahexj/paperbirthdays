@@ -37,12 +37,7 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
     <div className="bg-accent-light rounded-2xl border border-border p-6 mb-8">
       <h2 className="font-display text-xl font-semibold text-text-primary mb-4">Statistics</h2>
 
-      <div className={`grid gap-4 mb-6 ${totalFields > 1 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-3'}`}>
-        <div className="bg-surface rounded-lg p-4 border border-border">
-          <div className="font-display text-2xl font-semibold text-accent">{totalPapers}</div>
-          <div className="font-body text-sm text-text-secondary">Total Papers</div>
-        </div>
-
+      <div className={`grid gap-4 mb-6 ${totalFields > 1 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2'}`}>
         <div className="bg-surface rounded-lg p-4 border border-border">
           <div className="font-display text-2xl font-semibold text-accent">
             {yearRange[0]}-{yearRange[1]}
