@@ -1,12 +1,11 @@
-import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
-import { DailyPapers, Paper } from '@/types/paper';
+import { formatDateForDisplay } from '@/lib/dateUtils';
+import { Paper } from '@/types/paper';
 import PaperCard from '@/components/PaperCard';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { generatePaperSlug } from '@/lib/slugUtils';
+import { getPapersForDate } from '@/lib/database';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -54,12 +53,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const monthDay = `${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
-  const filePath = path.join(process.cwd(), 'public', 'data', `${monthDay}.json`);
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    const data: DailyPapers = JSON.parse(fileContents);
-    const paper = findPaperBySlug(data.papers, slug);
+    const papers = await getPapersForDate(monthDay);
+    const paper = findPaperBySlug(papers, slug);
 
     if (!paper) {
       return {
@@ -106,20 +103,18 @@ export default async function PaperPage({ params }: PageProps) {
   const monthDay = `${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
   const formattedDate = formatDateForDisplay(monthDay);
 
-  // Fetch data from local JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', `${monthDay}.json`);
-
-  let data: DailyPapers;
+  // Fetch papers from database
+  let papers: Paper[];
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    data = JSON.parse(fileContents);
+    papers = await getPapersForDate(monthDay);
   } catch (error) {
+    console.error(`Error fetching papers for ${monthDay}`, error);
     notFound();
   }
 
   // Find the specific paper matching this slug
-  const paper = findPaperBySlug(data.papers, slug);
+  const paper = findPaperBySlug(papers, slug);
 
   if (!paper) {
     notFound();
