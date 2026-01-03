@@ -37,7 +37,7 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
     <div className="bg-accent-light rounded-2xl border border-border p-6 mb-8">
       <h2 className="font-display text-xl font-semibold text-text-primary mb-4">Statistics</h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className={`grid gap-4 mb-6 ${totalFields > 1 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-3'}`}>
         <div className="bg-surface rounded-lg p-4 border border-border">
           <div className="font-display text-2xl font-semibold text-accent">{totalPapers}</div>
           <div className="font-body text-sm text-text-secondary">Total Papers</div>
@@ -57,10 +57,12 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
           <div className="font-body text-sm text-text-secondary">Avg Citations</div>
         </div>
 
-        <div className="bg-surface rounded-lg p-4 border border-border">
-          <div className="font-display text-2xl font-semibold text-accent">{totalFields}</div>
-          <div className="font-body text-sm text-text-secondary">Fields</div>
-        </div>
+        {totalFields > 1 && (
+          <div className="bg-surface rounded-lg p-4 border border-border">
+            <div className="font-display text-2xl font-semibold text-accent">{totalFields}</div>
+            <div className="font-body text-sm text-text-secondary">Fields</div>
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,28 +99,30 @@ export default function StatsPanel({ papers }: StatsPanelProps) {
         </a>
       </div>
 
-      {/* Field Distribution */}
-      <div className="mt-4 bg-surface rounded-lg p-4 border border-border">
-        <h3 className="font-body font-semibold text-text-primary mb-3">Top Fields</h3>
-        <div className="space-y-2">
-          {topFields.map(([field, count]) => (
-            <div key={field} className="flex items-center gap-2">
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="font-body text-sm text-text-primary">{field}</span>
-                  <span className="font-body text-xs text-text-muted">{count} papers</span>
-                </div>
-                <div className="w-full bg-tag-bg rounded-full h-2">
-                  <div
-                    className="bg-accent h-2 rounded-full transition-all"
-                    style={{ width: `${(count / totalPapers) * 100}%` }}
-                  />
+      {/* Field Distribution - Only show if there are multiple fields */}
+      {totalFields > 1 && (
+        <div className="mt-4 bg-surface rounded-lg p-4 border border-border">
+          <h3 className="font-body font-semibold text-text-primary mb-3">Top Fields</h3>
+          <div className="space-y-2">
+            {topFields.map(([field, count]) => (
+              <div key={field} className="flex items-center gap-2">
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-body text-sm text-text-primary">{field}</span>
+                    <span className="font-body text-xs text-text-muted">{count} papers</span>
+                  </div>
+                  <div className="w-full bg-tag-bg rounded-full h-2">
+                    <div
+                      className="bg-accent h-2 rounded-full transition-all"
+                      style={{ width: `${(count / totalPapers) * 100}%` }}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
