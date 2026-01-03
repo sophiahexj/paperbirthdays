@@ -1,8 +1,7 @@
 import { getTodayMMDD, formatDateForDisplay } from '@/lib/dateUtils';
-import { DailyPapers } from '@/types/paper';
+import { Paper } from '@/types/paper';
 import PaperBrowser from '@/components/PaperBrowser';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { getPapersForDate } from '@/lib/database';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
@@ -26,34 +25,27 @@ export default async function FieldPage({ params }: PageProps) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  // Fetch data from local JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', `${today}.json`);
-
-  let data: DailyPapers;
+  // Fetch papers from database
+  let papers: Paper[];
 
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    data = JSON.parse(fileContents);
+    papers = await getPapersForDate(today);
   } catch (error) {
-    console.error(`No data file found for ${today}`, error);
-    data = {
-      date: today,
-      total_papers: 0,
-      papers: [],
-    };
+    console.error(`Error fetching papers for ${today}`, error);
+    papers = [];
   }
 
   // Filter papers by field
-  const fieldPapers = data.papers.filter(
+  const fieldPapers = papers.filter(
     (p) => p.field.toLowerCase() === fieldName.toLowerCase()
   );
 
-  if (fieldPapers.length === 0 && data.total_papers > 0) {
+  if (fieldPapers.length === 0 && papers.length > 0) {
     notFound();
   }
 
   // Get all available fields for navigation
-  const availableFields = Array.from(new Set(data.papers.map(p => p.field))).sort();
+  const availableFields = Array.from(new Set(papers.map(p => p.field))).sort();
 
   return (
     <main className="min-h-screen bg-background py-12 px-4">

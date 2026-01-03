@@ -129,15 +129,15 @@ export default function PaperBrowser({ papers, allFields }: Props) {
       <div className="mb-8">
         <button
           onClick={() => setShowStats(!showStats)}
-          className="w-full bg-gradient-to-br from-accent-light via-surface to-background border-2 border-accent/30 rounded-2xl p-6 shadow-lg hover:border-accent/50 transition-all duration-200 group"
+          className="w-full bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200/60 rounded-2xl p-5 shadow-md hover:border-blue-300 transition-all duration-200 group"
         >
           <div className="flex items-center justify-between">
             <div className="text-left">
-              <h3 className="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
+              <h3 className="font-display text-lg font-semibold text-text-primary group-hover:text-blue-600 transition-colors">
                 📊 Paper Statistics
               </h3>
             </div>
-            <div className="text-3xl group-hover:scale-110 transition-transform">
+            <div className="text-2xl group-hover:scale-110 transition-transform">
               {showStats ? '▼' : '▶'}
             </div>
           </div>
