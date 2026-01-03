@@ -125,28 +125,46 @@ export default function PaperBrowser({ papers, allFields }: Props) {
         </div>
       )}
 
-      {/* Field Navigation - Below the paper */}
-      {allFields && allFields.length > 0 && (
-        <FieldNavigation fields={allFields} />
-      )}
-
-      {/* Toggle Stats Button */}
-      <div className="flex justify-end mb-3">
+      {/* Statistics Section - Prominent collapsible panel */}
+      <div className="mb-8">
         <button
           onClick={() => setShowStats(!showStats)}
-          className="px-3 py-1.5 text-xs font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition"
+          className="w-full bg-gradient-to-br from-accent-light via-surface to-background border-2 border-accent/30 rounded-2xl p-6 shadow-lg hover:border-accent/50 transition-all duration-200 group"
         >
-          {showStats ? 'Hide' : 'Show'} Statistics
+          <div className="flex items-center justify-between">
+            <div className="text-left">
+              <h3 className="font-display text-xl font-semibold text-text-primary mb-1 group-hover:text-accent transition-colors">
+                📊 Paper Statistics
+              </h3>
+              <p className="font-body text-sm text-text-secondary">
+                {showStats ? 'Click to hide' : 'Click to view'} insights about {filteredPapers.length.toLocaleString()} papers
+              </p>
+            </div>
+            <div className="text-3xl group-hover:scale-110 transition-transform">
+              {showStats ? '▼' : '▶'}
+            </div>
+          </div>
         </button>
-      </div>
 
-      {/* Statistics Panel */}
-      {showStats && <StatsPanel papers={filteredPapers} />}
+        {/* Statistics Panel */}
+        {showStats && (
+          <div className="mt-4">
+            <StatsPanel papers={filteredPapers} />
+          </div>
+        )}
+      </div>
 
       {/* Birthday Input - Find papers by your birthday */}
       <div className="mb-8">
         <BirthdayInput />
       </div>
+
+      {/* Field Navigation */}
+      {allFields && allFields.length > 0 && (
+        <div className="mb-8">
+          <FieldNavigation fields={allFields} />
+        </div>
+      )}
 
       {/* Filter Panel */}
       <FilterPanel
