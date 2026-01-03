@@ -1,0 +1,46 @@
+-- Migration: Create paper birthday subscriptions table
+-- Run this migration: psql $DATABASE_URL -f database/migrations/002_create_subscriptions_table.sql
+
+CREATE TABLE IF NOT EXISTS paper_birthday_subscriptions (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    paper_id VARCHAR(100) NOT NULL,
+    paper_title TEXT NOT NULL,
+    publication_month_day VARCHAR(5) NOT NULL, -- Format: MM-DD
+
+    -- Verification and security
+    verification_token VARCHAR(100) UNIQUE NOT NULL,
+    verified BOOLEAN DEFAULT FALSE,
+    verified_at TIMESTAMP,
+
+    -- Unsubscribe functionality
+    unsubscribe_token VARCHAR(100) UNIQUE NOT NULL,
+    unsubscribed BOOLEAN DEFAULT FALSE,
+    unsubscribed_at TIMESTAMP,
+
+    -- Email tracking
+    last_sent_year INTEGER,
+
+    -- Timestamps
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    -- Constraints
+    UNIQUE(email, paper_id) -- Prevent duplicate subscriptions
+);
+
+-- Indexes for performance
+CREATE INDEX IF NOT EXISTS idx_email ON paper_birthday_subscriptions(email);
+CREATE INDEX IF NOT EXISTS idx_paper_id ON paper_birthday_subscriptions(paper_id);
+CREATE INDEX IF NOT EXISTS idx_publication_month_day ON paper_birthday_subscriptions(publication_month_day);
+CREATE INDEX IF NOT EXISTS idx_verification_token ON paper_birthday_subscriptions(verification_token);
+CREATE INDEX IF NOT EXISTS idx_unsubscribe_token ON paper_birthday_subscriptions(unsubscribe_token);
+CREATE INDEX IF NOT EXISTS idx_verified ON paper_birthday_subscriptions(verified);
+CREATE INDEX IF NOT EXISTS idx_unsubscribed ON paper_birthday_subscriptions(unsubscribed);
+
+-- Index for daily email sending query
+CREATE INDEX IF NOT EXISTS idx_daily_send ON paper_birthday_subscriptions(publication_month_day, verified, unsubscribed);
+
+COMMENT ON TABLE paper_birthday_subscriptions IS 'Stores user subscriptions to annual paper birthday notifications';
+COMMENT ON COLUMN paper_birthday_subscriptions.verification_token IS 'Unique token for email verification (double opt-in)';
+COMMENT ON COLUMN paper_birthday_subscriptions.unsubscribe_token IS 'Unique token for one-click unsubscribe';
+COMMENT ON COLUMN paper_birthday_subscriptions.last_sent_year IS 'Year when birthday email was last sent (prevents duplicates)';

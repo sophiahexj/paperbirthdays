@@ -8,6 +8,7 @@ export interface Paper {
   subfield?: string;
   venue: string;
   url: string;
+  publication_month_day?: string; // Optional: MM-DD format for subscription feature
 }
 
 export interface DailyPapers {

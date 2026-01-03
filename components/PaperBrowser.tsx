@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { Paper } from '@/types/paper';
 import { filterPapers, sortPapers, getRandomPaper } from '@/lib/paperUtils';
 import PaperCard from './PaperCard';
@@ -9,6 +9,8 @@ import StatsPanel from './StatsPanel';
 import FieldNavigation from './FieldNavigation';
 import ShareModal from './ShareModal';
 import BirthdayInput from './BirthdayInput';
+import PaperSearchSubscribe from './PaperSearchSubscribe';
+import NotificationBanner from './NotificationBanner';
 
 interface Props {
   papers: Paper[];
@@ -91,6 +93,11 @@ export default function PaperBrowser({ papers, allFields }: Props) {
 
   return (
     <div>
+      {/* Notification Banner for verification/unsubscribe messages */}
+      <Suspense fallback={null}>
+        <NotificationBanner />
+      </Suspense>
+
       {/* Paper Display - NOW AT THE TOP */}
       {selectedPaper ? (
         <div className="mb-8">
@@ -132,6 +139,11 @@ export default function PaperBrowser({ papers, allFields }: Props) {
       {/* Birthday Input - Find papers by your birthday */}
       <div className="mb-8">
         <BirthdayInput />
+      </div>
+
+      {/* Paper Birthday Subscriptions */}
+      <div className="mb-8">
+        <PaperSearchSubscribe />
       </div>
 
       {/* Field Navigation */}
