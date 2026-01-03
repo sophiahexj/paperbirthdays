@@ -12,7 +12,6 @@ interface Props {
 
 export default function DatePaperDisplay({ papers, initialPaper }: Props) {
   const [selectedPaper, setSelectedPaper] = useState<Paper>(initialPaper);
-  const [showStats, setShowStats] = useState(false);
 
   const handleShowAnother = () => {
     // Get a random paper that's different from the current one
@@ -45,30 +44,9 @@ export default function DatePaperDisplay({ papers, initialPaper }: Props) {
         </div>
       )}
 
-      {/* Statistics Section - Prominent collapsible panel */}
+      {/* Statistics Panel - Always visible */}
       <div className="mt-8">
-        <button
-          onClick={() => setShowStats(!showStats)}
-          className="w-full bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200/60 rounded-2xl p-5 shadow-md hover:border-blue-300 transition-all duration-200 group"
-        >
-          <div className="flex items-center justify-between">
-            <div className="text-left">
-              <h3 className="font-display text-lg font-semibold text-text-primary group-hover:text-blue-600 transition-colors">
-                📊 Paper Statistics
-              </h3>
-            </div>
-            <div className="text-2xl group-hover:scale-110 transition-transform">
-              {showStats ? '▼' : '▶'}
-            </div>
-          </div>
-        </button>
-
-        {/* Statistics Panel */}
-        {showStats && (
-          <div className="mt-4">
-            <StatsPanel papers={papers} />
-          </div>
-        )}
+        <StatsPanel papers={papers} />
       </div>
     </>
   );
