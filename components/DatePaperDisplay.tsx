@@ -53,12 +53,9 @@ export default function DatePaperDisplay({ papers, initialPaper }: Props) {
         >
           <div className="flex items-center justify-between">
             <div className="text-left">
-              <h3 className="font-display text-xl font-semibold text-text-primary mb-1 group-hover:text-accent transition-colors">
+              <h3 className="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
                 📊 Paper Statistics
               </h3>
-              <p className="font-body text-sm text-text-secondary">
-                {showStats ? 'Click to hide' : 'Click to view'} insights about {papers.length.toLocaleString()} papers
-              </p>
             </div>
             <div className="text-3xl group-hover:scale-110 transition-transform">
               {showStats ? '▼' : '▶'}
