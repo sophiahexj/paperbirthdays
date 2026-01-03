@@ -99,9 +99,12 @@ export default function FilterPanel({
                 <input
                   type="number"
                   value={selectedYearRange[0]}
-                  onChange={(e) =>
-                    onYearRangeChange([parseInt(e.target.value), selectedYearRange[1]])
-                  }
+                  onChange={(e) => {
+                    const newStart = parseInt(e.target.value);
+                    // Ensure start year doesn't exceed end year
+                    const newEnd = Math.max(newStart, selectedYearRange[1]);
+                    onYearRangeChange([newStart, newEnd]);
+                  }}
                   min={yearRange[0]}
                   max={yearRange[1]}
                   className="w-20 px-2 py-2 font-body border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-surface text-text-primary"
@@ -110,9 +113,12 @@ export default function FilterPanel({
                 <input
                   type="number"
                   value={selectedYearRange[1]}
-                  onChange={(e) =>
-                    onYearRangeChange([selectedYearRange[0], parseInt(e.target.value)])
-                  }
+                  onChange={(e) => {
+                    const newEnd = parseInt(e.target.value);
+                    // Ensure end year doesn't go below start year
+                    const newStart = Math.min(newEnd, selectedYearRange[0]);
+                    onYearRangeChange([newStart, newEnd]);
+                  }}
                   min={yearRange[0]}
                   max={yearRange[1]}
                   className="w-20 px-2 py-2 font-body border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-surface text-text-primary"
