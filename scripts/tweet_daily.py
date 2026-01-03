@@ -36,10 +36,13 @@ def get_todays_papers(cursor):
             paper_id,
             author_count
         FROM papers
-        WHERE publication_date::text LIKE %s
+        WHERE publication_month_day = %s
+          AND venue IS NOT NULL
+          AND venue != 'Unknown Venue'
+          AND TRIM(venue) != ''
         ORDER BY citation_count DESC
         LIMIT 100
-    ''', (f'%-{month_day}',))
+    ''', (month_day,))
 
     return cursor.fetchall()
 
