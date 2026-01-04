@@ -6,6 +6,7 @@ Posts one paper celebrating its publication anniversary each day
 
 import os
 import sys
+import json
 import random
 from datetime import datetime
 import psycopg2
@@ -13,6 +14,20 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
+
+# Load author Twitter handles mapping
+def load_author_handles():
+    """Load author name to Twitter handle mapping"""
+    try:
+        mapping_path = os.path.join(os.path.dirname(__file__), 'author_twitter_handles.json')
+        if os.path.exists(mapping_path):
+            with open(mapping_path, 'r') as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"Warning: Could not load author Twitter handles: {e}")
+    return {}
+
+AUTHOR_TWITTER_HANDLES = load_author_handles()
 
 def get_database_connection():
     """Connect to PostgreSQL database"""
@@ -34,7 +49,8 @@ def get_todays_papers(cursor):
             field,
             venue,
             paper_id,
-            author_count
+            author_count,
+            authors
         FROM papers
         WHERE publication_month_day = %s
           AND venue IS NOT NULL
@@ -49,16 +65,43 @@ def get_todays_papers(cursor):
 def select_paper(papers):
     """
     Select a paper to tweet about
-    Strategy: Random selection from top 10 most-cited papers
-    This balances quality (high-impact) with variety
+
+    Strategy:
+    1. First, try to find papers where at least one author has a Twitter account (from top 50)
+    2. If found, randomly select from those papers
+    3. If not found, fall back to random selection from top 10 most-cited papers
+
+    This maximizes engagement by tagging authors when possible
     """
     if not papers:
         return None
 
-    # Take top 10 by citations, or all if fewer than 10
-    top_papers = papers[:min(10, len(papers))]
+    # First pass: Look for papers with authors who have Twitter accounts
+    if AUTHOR_TWITTER_HANDLES:
+        # Check top 50 papers for author matches
+        top_50 = papers[:min(50, len(papers))]
+        papers_with_handles = []
 
-    # Randomly select one
+        for paper in top_50:
+            authors = paper[7] if len(paper) > 7 else []  # authors is the 8th column
+            if authors:
+                # Check if any author has a Twitter handle
+                for author in authors:
+                    if author in AUTHOR_TWITTER_HANDLES or any(
+                        author.lower() == mapped_name.lower()
+                        for mapped_name in AUTHOR_TWITTER_HANDLES.keys()
+                    ):
+                        papers_with_handles.append(paper)
+                        break  # Found at least one author with Twitter, add this paper
+
+        # If we found papers with author handles, randomly select from those
+        if papers_with_handles:
+            print(f"Found {len(papers_with_handles)} papers with authors on Twitter")
+            return random.choice(papers_with_handles)
+
+    # Fallback: Random selection from top 10 most-cited papers
+    print("No papers found with authors on Twitter, using top cited papers")
+    top_papers = papers[:min(10, len(papers))]
     return random.choice(top_papers)
 
 def calculate_age(year):
@@ -66,27 +109,75 @@ def calculate_age(year):
     current_year = datetime.now().year
     return current_year - year
 
+def find_author_handles(authors):
+    """
+    Look up Twitter handles for authors
+
+    Args:
+        authors: List of author names
+
+    Returns:
+        List of Twitter handles (with @ prefix) found in our mapping
+    """
+    if not authors or not AUTHOR_TWITTER_HANDLES:
+        return []
+
+    handles = []
+    for author in authors:
+        # Try exact match first
+        if author in AUTHOR_TWITTER_HANDLES:
+            handle = AUTHOR_TWITTER_HANDLES[author]
+            if handle and not handle.startswith('@'):
+                handle = '@' + handle
+            handles.append(handle)
+        # Try case-insensitive match
+        else:
+            for mapped_name, mapped_handle in AUTHOR_TWITTER_HANDLES.items():
+                if mapped_name.lower() == author.lower():
+                    if mapped_handle and not mapped_handle.startswith('@'):
+                        mapped_handle = '@' + mapped_handle
+                    handles.append(mapped_handle)
+                    break
+
+    return handles
+
 def generate_tweet(paper, site_url="https://happybdaypaper.com"):
     """
     Generate tweet text for a paper
 
     Format:
-    [TITLE] turns [AGE] today.
+    [TITLE] turns [AGE] today!
+
+    [Author tags if available]
 
     Cited [CITATION_COUNT] times.
 
     #[FIELD]
     📄 happybdaypaper.com
     """
-    title, year, citations, field, venue, paper_id, author_count = paper
+    title, year, citations, field, venue, paper_id, author_count, authors = paper
 
     age = calculate_age(year)
 
     # Clean field name for hashtag (remove spaces, capitalize)
     field_hashtag = field.replace(' ', '').replace('-', '')
 
+    # Look up author Twitter handles
+    author_handles = find_author_handles(authors) if authors else []
+    author_line = ' '.join(author_handles) if author_handles else ''
+
     # Build tweet
-    tweet = f"""{title} turns {age} today.
+    if author_line:
+        tweet = f"""{title} turns {age} today!
+
+{author_line}
+
+Cited {citations:,} times.
+
+#{field_hashtag}
+📄 {site_url}"""
+    else:
+        tweet = f"""{title} turns {age} today!
 
 Cited {citations:,} times.
 
@@ -104,7 +195,17 @@ Cited {citations:,} times.
         max_title_len = len(title) - (tweet_len - 280) - 3  # -3 for "..."
         if max_title_len > 20:  # Only truncate if we can keep reasonable length
             truncated_title = title[:max_title_len] + "..."
-            tweet = f"""{truncated_title} turns {age} today.
+            if author_line:
+                tweet = f"""{truncated_title} turns {age} today!
+
+{author_line}
+
+Cited {citations:,} times.
+
+#{field_hashtag}
+📄 {site_url}"""
+            else:
+                tweet = f"""{truncated_title} turns {age} today!
 
 Cited {citations:,} times.
 

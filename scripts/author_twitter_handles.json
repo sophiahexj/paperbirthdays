@@ -1,0 +1,25 @@
+{
+  "_comment": "Maps author names to Twitter handles. Add entries as you discover academic Twitter accounts.",
+  "_instructions": "Format: 'Full Name as it appears in papers': 'twitter_handle' (without @)",
+
+  "Geoffrey Hinton": "geoffreyhinton",
+  "Yann LeCun": "ylecun",
+  "Andrew Ng": "AndrewYNg",
+  "Fei-Fei Li": "drfeifei",
+  "Ian Goodfellow": "goodfellow_ian",
+  "Yoshua Bengio": "yoshuabengio",
+  "Demis Hassabis": "demishassabis",
+  "Judea Pearl": "yudapearl",
+  "Michael I. Jordan": "MichaelJordan",
+  "Stuart Russell": "stuartjrussell",
+  "Peter Norvig": "pnorvig",
+  "Sebastian Thrun": "SebastianThrun",
+  "Daphne Koller": "DaphneKoller",
+  "Andrew Zisserman": "zisserman",
+  "Jitendra Malik": "MalikJitendra",
+  "Anima Anandkumar": "AnimaAnandkumar",
+  "Kate Crawford": "katecrawford",
+  "Timnit Gebru": "timnitGebru",
+  "Melanie Mitchell": "MelMitchell1",
+  "Gary Marcus": "GaryMarcus"
+}
