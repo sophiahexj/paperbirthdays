@@ -71,43 +71,31 @@ def generate_tweet(paper, site_url="https://happybdaypaper.com"):
     Generate tweet text for a paper
 
     Format:
-    🎂 Paper Birthday!
+    [TITLE] turns [AGE] today.
 
-    "{Title}" turns {age} today!
+    Cited [CITATION_COUNT] times.
 
-    📅 Published {Month} {Day}, {Year}
-    📊 {citations} citations
-    🏷️ #{field}
-
-    Celebrate other paper birthdays at [URL]
+    #[FIELD]
+    📄 happybdaypaper.com
     """
     title, year, citations, field, venue, paper_id, author_count = paper
 
     age = calculate_age(year)
-    today = datetime.now()
-    month_name = today.strftime('%B')
-    day = today.day
-
-    # Create date-based URL (without year - points to all papers on this date)
-    month_abbrev = today.strftime('%b').lower()
-    paper_url = f"{site_url}/{month_abbrev}-{day}"
 
     # Clean field name for hashtag (remove spaces, capitalize)
     field_hashtag = field.replace(' ', '').replace('-', '')
 
     # Build tweet
-    tweet = f"""🎂 Paper Birthday!
+    tweet = f"""{title} turns {age} today.
 
-"{title}" turns {age} today!
+Cited {citations:,} times.
 
-📅 Published {month_name} {day}, {year}
-🏷️ #{field_hashtag}
-
-Celebrate other paper birthdays at {paper_url}"""
+#{field_hashtag}
+📄 {site_url}"""
 
     # Check length (Twitter limit is 280 chars, URLs count as 23 chars)
     # Calculate actual length (Twitter counts URLs as 23 chars)
-    url_display_len = len(paper_url)
+    url_display_len = len(site_url)
     url_twitter_len = 23
     tweet_len = len(tweet) - url_display_len + url_twitter_len
 
@@ -116,14 +104,12 @@ Celebrate other paper birthdays at {paper_url}"""
         max_title_len = len(title) - (tweet_len - 280) - 3  # -3 for "..."
         if max_title_len > 20:  # Only truncate if we can keep reasonable length
             truncated_title = title[:max_title_len] + "..."
-            tweet = f"""🎂 Paper Birthday!
+            tweet = f"""{truncated_title} turns {age} today.
 
-"{truncated_title}" turns {age} today!
+Cited {citations:,} times.
 
-📅 Published {month_name} {day}, {year}
-🏷️ #{field_hashtag}
-
-Celebrate other paper birthdays at {paper_url}"""
+#{field_hashtag}
+📄 {site_url}"""
 
     return tweet
 
