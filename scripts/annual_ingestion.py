@@ -162,17 +162,22 @@ def ingest_new_papers(cursor, last_ingestion_date):
 
                             fields = paper.get('fieldsOfStudy', [])
 
+                            # Extract author names
+                            authors_list = paper.get('authors', [])
+                            author_names = [author.get('name') for author in authors_list if author.get('name')]
+
                             try:
                                 cursor.execute("""
                                     INSERT INTO papers (
-                                        paper_id, source, title, author_count,
+                                        paper_id, source, title, authors, author_count,
                                         publication_date, publication_month_day, year,
                                         venue, field, fields_of_study, citation_count,
                                         doi, url, pdf_url, is_open_access
                                     ) VALUES (
-                                        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+                                        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
                                     )
                                     ON CONFLICT (paper_id) DO UPDATE SET
+                                        authors = EXCLUDED.authors,
                                         citation_count = EXCLUDED.citation_count,
                                         updated_at = NOW()
                                     RETURNING (xmax = 0) AS inserted
@@ -180,7 +185,8 @@ def ingest_new_papers(cursor, last_ingestion_date):
                                     paper['paperId'],
                                     'semantic_scholar',
                                     paper.get('title'),
-                                    len(paper.get('authors', [])),
+                                    author_names,  # Store author names array
+                                    len(authors_list),
                                     actual_pub_date,
                                     actual_month_day,
                                     actual_year,

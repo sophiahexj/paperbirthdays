@@ -120,24 +120,30 @@ def ingest_papers(month, day, year_start=2018, year_end=2024):
 
                         fields = paper.get('fieldsOfStudy', [])
 
+                        # Extract author names
+                        authors_list = paper.get('authors', [])
+                        author_names = [author.get('name') for author in authors_list if author.get('name')]
+
                         try:
                             cursor.execute("""
                                 INSERT INTO papers (
-                                    paper_id, source, title, author_count,
+                                    paper_id, source, title, authors, author_count,
                                     publication_date, publication_month_day, year,
                                     venue, field, fields_of_study, citation_count,
                                     doi, url, pdf_url, is_open_access
                                 ) VALUES (
-                                    %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+                                    %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
                                 )
                                 ON CONFLICT (paper_id) DO UPDATE SET
+                                    authors = EXCLUDED.authors,
                                     citation_count = EXCLUDED.citation_count,
                                     updated_at = NOW()
                             """, (
                                 paper['paperId'],
                                 'semantic_scholar',
                                 paper.get('title'),
-                                len(paper.get('authors', [])),
+                                author_names,  # Store author names array
+                                len(authors_list),
                                 actual_pub_date,  # Use ACTUAL date from API
                                 actual_month_day,  # Use ACTUAL month-day
                                 actual_year,  # Use ACTUAL year
