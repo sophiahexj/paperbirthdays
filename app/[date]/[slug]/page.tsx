@@ -6,6 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { generatePaperSlug } from '@/lib/slugUtils';
 import { getPapersForDate } from '@/lib/database';
+import ShareButtons from '@/components/ShareButtons';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -120,6 +121,14 @@ export default async function PaperPage({ params }: PageProps) {
     notFound();
   }
 
+  // Calculate paper age
+  const currentYear = new Date().getFullYear();
+  const paperAge = currentYear - paper.year;
+
+  // Build share URL
+  const shareUrl = `https://happybdaypaper.com/${date}/${slug}`;
+  const shareText = `This Paper Turns ${paperAge} Today! 🎂 "${paper.title}" - Come celebrate!`;
+
   return (
     <main className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -139,17 +148,42 @@ export default async function PaperPage({ params }: PageProps) {
           </Link>
         </div>
 
-        <header className="text-center mb-12">
-          <h1 className="font-display text-5xl font-semibold mb-2 text-text-primary">
-            🎂 Paper Birthday
+        <header className="text-center mb-8">
+          <h1 className="font-display text-4xl sm:text-5xl font-semibold mb-3 text-text-primary">
+            🎂 This Paper Turns {paperAge} Today!
           </h1>
-          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mb-2">
-            {formattedDate}, {paper.year}
+          <p className="font-body text-lg text-text-secondary mb-2">
+            Join the Birthday Celebration!
+          </p>
+          <p className="font-body text-sm text-text-muted">
+            Someone thought you&apos;d enjoy celebrating this paper!
+          </p>
+          <p className="font-body text-base uppercase tracking-[0.15em] text-accent mt-4">
+            Published {formattedDate}, {paper.year}
           </p>
         </header>
 
         {/* Paper Card */}
         <PaperCard paper={paper} />
+
+        {/* Subscribe CTA */}
+        <div className="mt-8 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/60 rounded-2xl p-6 text-center">
+          <h3 className="font-display text-xl font-semibold text-text-primary mb-2">
+            Never Miss This Paper&apos;s Birthday Again!
+          </h3>
+          <p className="font-body text-sm text-text-secondary mb-4">
+            Get an annual reminder to celebrate this paper&apos;s publication anniversary
+          </p>
+          <Link
+            href="/#subscribe"
+            className="inline-block px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition-all duration-150 font-medium"
+          >
+            Subscribe to Birthday Reminders
+          </Link>
+        </div>
+
+        {/* Social Sharing */}
+        <ShareButtons url={shareUrl} text={shareText} />
 
         {/* Explore more link */}
         <div className="text-center mt-12">
