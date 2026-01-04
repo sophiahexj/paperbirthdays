@@ -1,0 +1,169 @@
+# Top Scientists on Twitter - Curated List
+# Format: Full Name | twitter_handle | Field
+# Add one per line, pipe-separated
+
+# ECONOMICS
+Paul Krugman | NYTimesKrugman | Economics
+Justin Wolfers | JustinWolfers | Economics
+Tyler Cowen | tylercowen | Economics
+Alex Tabarrok | ATabarrok | Economics
+Robert Reich | RBReich | Economics
+Nouriel Roubini | Nouriel | Economics
+Thomas Piketty | PikettyLeMonde | Economics
+Emily Oster | ProfEmilyOster | Economics
+J. Bradford DeLong | delong | Economics
+Jennifer Doleac | jenniferdoleac | Economics
+Claudia Sahm | Claudia_Sahm | Economics
+Betsey Stevenson | BetseyStevenson | Economics
+Arindrajit Dube | arindube | Economics
+Austan Goolsbee | Austan_Goolsbee | Economics
+Jason Furman | jasonfurman | Economics
+Christina Romer | ChristinaRomer | Economics
+Greg Mankiw | GregMankiw | Economics
+Esther Duflo | DufloEsther | Economics
+Abhijit Banerjee | AbhijitBanerjee | Economics
+Raj Chetty | RajChetty | Economics
+
+# PHYSICS & ASTRONOMY
+Neil deGrasse Tyson | neiltyson | Physics
+Brian Cox | ProfBrianCox | Physics
+Sean Carroll | seanmcarroll | Physics
+Katie Mack | AstroKatie | Physics
+Michio Kaku | michiokaku | Physics
+Phil Plait | BadAstronomer | Physics
+Mike Brown | plutokiller | Physics
+Chanda Prescod-Weinstein | IBJIYONGI | Physics
+Lawrence Krauss | LKrauss1 | Physics
+Brian Greene | bgreene | Physics
+Lisa Randall | lirarandall | Physics
+Carlo Rovelli | carlorovelli | Physics
+Sabine Hossenfelder | skdh | Physics
+Lucie Green | DrLucieGreen | Physics
+Tim O'Brien | ProfTimOBrien | Physics
+Carolyn Porco | CarolynPorco | Physics
+Jocelyn Bell Burnell | jocelyn913 | Physics
+Vera Rubin | VeraRubinObs | Physics
+Andrea Ghez | AndreaGhez | Physics
+Kip Thorne | KipThorne | Physics
+
+# BIOLOGY & LIFE SCIENCES
+Richard Dawkins | RichardDawkins | Biology
+Carl Zimmer | carlzimmer | Biology
+Ed Yong | edyong209 | Biology
+Jennifer Doudna | jendoudna | Biology
+George Church | geochurch | Biology
+Pamela Ronald | pcronald | Biology
+Danielle Lee | DNLee5 | Biology
+Sylvia Earle | MissionBlue | Biology
+Jane Goodall | JaneGoodallInst | Biology
+E.O. Wilson | EOWilsonFdn | Biology
+Paul Nurse | ProfPaulNurse | Biology
+Venki Ramakrishnan | Venki_Ramak | Biology
+Frances Arnold | francesarnold | Biology
+Carolyn Bertozzi | CarolynBertozzi | Biology
+Martin Chalfie | MartinChalfie | Biology
+Roger Tsien | RogerTsien | Biology
+Elizabeth Blackburn | EBlackburnLab | Biology
+Carol Greider | CarolGreider | Biology
+Linda Buck | LindaBuckLab | Biology
+Ben Barres | BenBarres | Biology
+
+# MEDICINE & HEALTH
+Atul Gawande | Atul_Gawande | Medicine
+Eric Topol | EricTopol | Medicine
+Anthony Fauci | NIAIDNews | Medicine
+Peter Hotez | PeterHotez | Medicine
+Leana Wen | DrLeanaWen | Medicine
+Siddhartha Mukherjee | DrSidMukherjee | Medicine
+Abraham Verghese | AbrahamVerghese | Medicine
+Vivek Murthy | Surgeon_General | Medicine
+Ashish Jha | ashishkjha | Medicine
+Rochelle Walensky | CDCDirector | Medicine
+Francis Collins | NIHDirector | Medicine
+Ben Goldacre | bengoldacre | Medicine
+Paul Offit | DrPaulOffit | Medicine
+Zeke Emanuel | ZekeEmanuel | Medicine
+Robert Wachter | Bob_Wachter | Medicine
+Megan Ranney | meganranney | Medicine
+Celine Gounder | celinegounder | Medicine
+Jennifer Nuzzo | JenniferNuzzo | Medicine
+Tom Inglesby | T_Inglesby | Medicine
+Michael Osterholm | mtosterholm | Medicine
+
+# PSYCHOLOGY & NEUROSCIENCE
+Steven Pinker | sapinker | Psychology
+Daniel Kahneman | NYUPsych | Psychology
+Angela Duckworth | angeladuckw | Psychology
+Susan David | Susan_David | Psychology
+Adam Grant | AdamMGrant | Psychology
+Carol Dweck | CarolDweck | Psychology
+Philip Zimbardo | PhilZimbardo | Psychology
+Elizabeth Loftus | ElizabethLoftus | Psychology
+Robert Cialdini | RobertCialdini | Psychology
+Paul Bloom | paulbloomatyale | Psychology
+Lisa Feldman Barrett | LFeldmanBarrett | Psychology
+David Eagleman | davideagleman | Neuroscience
+Oliver Sacks | OliverSacks | Neuroscience
+V.S. Ramachandran | VSRamachandran1 | Neuroscience
+Antonio Damasio | AntonioDamasio | Neuroscience
+Michael Gazzaniga | gazzaniga | Neuroscience
+Patricia Churchland | pschurchland | Neuroscience
+Christof Koch | ChristofKoch1 | Neuroscience
+Karl Friston | KarlFriston | Neuroscience
+Eve Marder | EveMarder | Neuroscience
+
+# CHEMISTRY
+Frances Arnold | francesarnold | Chemistry
+Carolyn Bertozzi | CarolynBertozzi | Chemistry
+Ben Feringa | Ben_Feringa | Chemistry
+Omar Yaghi | OmarYaghi | Chemistry
+Jennifer Doudna | jendoudna | Chemistry
+George Whitesides | GeorgeWhiteside | Chemistry
+Roald Hoffmann | RoaldHoffmann | Chemistry
+Ada Yonath | AdaYonath | Chemistry
+Mario Molina | MarioMolina | Chemistry
+Paul Anastas | PaulAnastas | Chemistry
+
+# MATHEMATICS
+Terence Tao | terencetao | Mathematics
+Tim Gowers | wtgowers | Mathematics
+Jordan Ellenberg | JSEllenberg | Mathematics
+Cathy O'Neil | mathbabedotorg | Mathematics
+Hannah Fry | FryRsquared | Mathematics
+Steven Strogatz | stevenstrogatz | Mathematics
+John Baez | johncarlosbaez | Mathematics
+Maryam Mirzakhani | StanfordMath | Mathematics
+Karen Uhlenbeck | KarenUhlenbeck | Mathematics
+Ingrid Daubechies | IngridDaubechie | Mathematics
+
+# COMPUTER SCIENCE (Additional to existing)
+Fei-Fei Li | drfeifei | Computer Science
+Andrew Ng | AndrewYNg | Computer Science
+Yann LeCun | ylecun | Computer Science
+Geoffrey Hinton | geoffreyhinton | Computer Science
+Yoshua Bengio | yoshuabengio | Computer Science
+Demis Hassabis | demishassabis | Computer Science
+Ian Goodfellow | goodfellow_ian | Computer Science
+Judea Pearl | yudapearl | Computer Science
+Stuart Russell | stuartjrussell | Computer Science
+Peter Norvig | pnorvig | Computer Science
+Anima Anandkumar | AnimaAnandkumar | Computer Science
+Kate Crawford | katecrawford | Computer Science
+Timnit Gebru | timnitGebru | Computer Science
+Joy Buolamwini | jovialjoy | Computer Science
+Cynthia Dwork | CynthiaDwork | Computer Science
+Shafi Goldwasser | ShafiGoldwasser | Computer Science
+Barbara Liskov | BarbaraLiskov | Computer Science
+Daphne Koller | DaphneKoller | Computer Science
+
+# ENVIRONMENTAL SCIENCE & CLIMATE
+Michael Mann | MichaelEMann | Climate Science
+Katharine Hayhoe | KHayhoe | Climate Science
+Michael Oppenheimer | MikeOppenheimer | Climate Science
+Peter Gleick | PeterGleick | Climate Science
+Kim Cobb | KimCobb | Climate Science
+Andrea Dutton | AndreaDutton | Climate Science
+Kate Marvel | DrKateMarvel | Climate Science
+Gavin Schmidt | ClimateOfGavin | Climate Science
+Raymond Pierrehumbert | RaymondPierre | Climate Science
+Kerry Emanuel | KerryEmanuel | Climate Science
